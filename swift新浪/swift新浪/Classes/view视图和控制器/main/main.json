@@ -1,0 +1,45 @@
+[
+  {
+    "vistorInfo" : {
+      "imageName" : "",
+      "message" : "关注一些人，回这里看看什么惊喜关注一些人，回这里看看有什么惊喜哈哈哈哈"
+    },
+    "title" : "首页",
+    "clasName" : "WBHomeViewController",
+    "imageSelect" : "shouye-icon",
+    "imageNormal" : "首页"
+  },
+  {
+    "vistorInfo" : {
+      "imageName" : "订单2",
+      "message" : "登录后，别人评论你的微博，发给你的信息，都会在这里接收到通知哦！"
+    },
+    "title" : "发现",
+    "clasName" : "WBDiscoverViewController",
+    "imageSelect" : "订单2",
+    "imageNormal" : "订单"
+  },
+  {
+    "clasName" : "UIViewController"
+  },
+  {
+    "vistorInfo" : {
+      "imageName" : "钱包2",
+      "message" : "登录后，最新最热微博尽在掌握，不会再与实施潮流擦肩而过"
+    },
+    "title" : "消息",
+    "clasName" : "WBMessageViewController",
+    "imageSelect" : "钱包2",
+    "imageNormal" : "钱包"
+  },
+  {
+    "vistorInfo" : {
+      "imageName" : "wo-d",
+      "message" : "登录后你的微博，相册个人信息会显示在这里，展示给别人"
+    },
+    "title" : "我的",
+    "clasName" : "WBPodfileViewController",
+    "imageSelect" : "wo-d",
+    "imageNormal" : "我的"
+  }
+]
