@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 /// 通过webview加载新浪微博授权页面控制器
 class WBQAuthViewController: UIViewController {
 
@@ -16,6 +16,8 @@ class WBQAuthViewController: UIViewController {
     override func loadView() {
         view=webView
         view.backgroundColor=UIColor.white
+//        取消页面的滚动，新浪微博的服务器，返回的授权界面默认的时候手机全屏
+        webView.scrollView.isScrollEnabled=false
         
 //        设置代理
         webView.delegate=self
@@ -49,6 +51,7 @@ class WBQAuthViewController: UIViewController {
 
     //MARK:  --------------监听方法
   @objc fileprivate func close() {
+       SVProgressHUD.dismiss()
        navigationController?.dismiss(animated: true, completion: nil)
     }
     // --------------自动填充，webview的注入直接通过js修改，修改本地浏览器中缓存的页面内容
@@ -79,27 +82,52 @@ extension WBQAuthViewController:UIWebViewDelegate{
         
 //       1. 确认思路
 //        如果请求地址包含http://baidu.com/不加载页面，否则加载页面
-        
         if request.url?.absoluteString.hasPrefix(WBRedirect_uri)==false{
             
             return true
         }
         print("加载请求-------\(request.url?.absoluteString)")
-        
-//        query就是URL中查询字符串
+//        2.从http://baidu.com回调地址中查找是否有code=
+//        query就是URL中查询字符串，如果没有code就取消授权
         if request.url?.query?.hasPrefix("code=")==false{
             print("取消授权")
             close()
            return false
         }
+//        query就是查询字符串，这里是获取授权码
         print("加载请求-------\(request.url?.query)")
-
-        
     
-//        2.从http://baidu.com回调地址中查找是否有code=
-        
 //        3.如果有就说明授权成功，否则授权失败
-        return true
+//        3.从query字符串中取出字符串
+//        代码走到此处一定有查询字符串并且包含code
+        
+        let code = request.url?.query?.substring(from: "code=".endIndex) ?? ""
+        print("授权码-----是\(code)")
+        
+//        4.使用授权码 获取token
+        WBNetworkManager.shared.loadAccessToken(code: code)
+//        关于URL中的一些信息
+//        EG:meituan:///shouP1:P2:P3:P4/大西瓜/红牛/小樱桃/肥羊
+//        scheme：协议头--- meituan
+//        host：主机头----nil/如果没有///
+//        pathcomponent：返回数组、URL中所有路径的数组----show:P1:P2:P3   /大西瓜/红牛/小樱桃/肥羊
+//        query：查询字符串、URL中？后面所有的内容
+        
+        
+        return false
+    }
+    
+    
+    
+    /// 开始加载和结束加载的时候开始菊花，结束菊花
+    ///
+    /// - parameter webView:
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        SVProgressHUD.show()
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        SVProgressHUD.dismiss()
     }
     
     

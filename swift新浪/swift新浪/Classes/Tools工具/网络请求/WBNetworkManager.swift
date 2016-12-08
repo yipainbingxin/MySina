@@ -17,28 +17,52 @@ enum WBHTTPMethod {
     case POST
 
 }
-
-
 /// 网络管理工具
 
 class WBNetworkManager: AFHTTPSessionManager {
     
 //    静态区／常量/闭包
 //    在第一次访问时，执行闭包，并且将结果保存在shared常量中
-    static let shared = WBNetworkManager()
+//    static let shared = WBNetworkManager()
+    
+//    这里是闭包的两种写法
+//    static let shared = {()->WBNetworkManager in
+//        let instance = WBNetworkManager()
+//      return instance
+//    }()
+    static let shared: WBNetworkManager = {
+//        实例化对象
+        let instance = WBNetworkManager()
+//        设置响应的反序列化支持的数据格式类型
+        instance.responseSerializer.acceptableContentTypes?.insert("text/plain")
+//        返回对象
+        return instance
+    }()//执行
+    
+    
 //    访问令牌，所有网络请求，都基于此令牌（登录除外）,
 //    为了保护用户安全，默认权限是三天，token作为访问令牌有期限
 //    模拟token过期，返回的是403，处理用户token过期
-    var accessToken : String?
-//        ="2.007xcQ6GJ3QsDCf3c8ee25386h6yPB"
     
+//    访问令牌
+//    access_token" = "2.007xcQ6GJ3QsDCfecb36a9332J5bWE";
+//    开发者过期日期是5年，使用者过期日期是3天
+//    "expires_in" = 157679999;
+//    过期时间
+//    "remind_in" = 157679999;
+//    uid = 5870168396;
+
+//    var accessToken : String?
+////    UId 用户的微博uid
+//    var uid: String? = "5365823342"
     
-//    UId 用户的微博uid
-    var uid: String? = "5365823342"
+//    用户账户的懒加载属性
+    lazy var userAccount = WBUserAccount()
+    
    
 //    用户登录标记
     var userLogin: Bool{
-                 return accessToken != nil
+                 return userAccount.access_token != nil
     }
     
     
@@ -49,7 +73,7 @@ class WBNetworkManager: AFHTTPSessionManager {
 //        处理token字典
 //        0.判断token是否为nil，为nil直接返回
      
-        guard let token = accessToken else {
+        guard let token = userAccount.access_token else {
 //        FIXME:-----------------发送通知，提示用户登录
                 print("没有token！需要登录")
                 completion(nil, false)
@@ -117,4 +141,24 @@ class WBNetworkManager: AFHTTPSessionManager {
         }
     }
 
+}
+
+
+// MARK: - QAuth相关方法
+extension WBNetworkManager{
+//    加载accessToken
+    func loadAccessToken(code: String) {
+        let urlString = "https://api.weibo.com/oauth2/access_token"
+        
+        let parames = ["client_id":WBAppKey,"client_secret":WBAppSecret,"grant_type":"authorization_code","code":code,"redirect_uri":WBRedirect_uri,]
+        request(method: .POST, urlString: urlString, parameters: parames) { (json, isSucess) in
+//            直接用字典设置useraccount的属性
+            self.userAccount.yy_modelSet(with: (json as? [String:Any]) ?? [:])
+            print(self.userAccount)
+            self.userAccount.saveAccount()
+        }
+
+    }
+    
+    
 }
