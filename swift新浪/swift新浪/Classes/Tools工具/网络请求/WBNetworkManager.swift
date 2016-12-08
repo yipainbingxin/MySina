@@ -74,8 +74,11 @@ class WBNetworkManager: AFHTTPSessionManager {
 //        0.判断token是否为nil，为nil直接返回
      
         guard let token = userAccount.access_token else {
-//        FIXME:-----------------发送通知，提示用户登录
+//        ----------------发送通知，提示用户登录
                 print("没有token！需要登录")
+            
+            
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: WBUserShouldLoginNotification), object: nil)
                 completion(nil, false)
                 return
         }
@@ -125,6 +128,10 @@ class WBNetworkManager: AFHTTPSessionManager {
             if (task?.response as? HTTPURLResponse)?.statusCode==403 {
                 print("token ----------过期了")
 //                FIXME:发送通知，提示用户再次登录（本方法不知道被谁调用，谁接受到通知，谁处理！）
+                
+                
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: WBUserShouldLoginNotification), object: "badToken")
+
             }
 //            error通常比较吓人，输出的一般都是英文
             print("网络请求错误-------\(error)")
@@ -143,22 +150,3 @@ class WBNetworkManager: AFHTTPSessionManager {
 
 }
 
-
-// MARK: - QAuth相关方法
-extension WBNetworkManager{
-//    加载accessToken
-    func loadAccessToken(code: String) {
-        let urlString = "https://api.weibo.com/oauth2/access_token"
-        
-        let parames = ["client_id":WBAppKey,"client_secret":WBAppSecret,"grant_type":"authorization_code","code":code,"redirect_uri":WBRedirect_uri,]
-        request(method: .POST, urlString: urlString, parameters: parames) { (json, isSucess) in
-//            直接用字典设置useraccount的属性
-            self.userAccount.yy_modelSet(with: (json as? [String:Any]) ?? [:])
-            print(self.userAccount)
-            self.userAccount.saveAccount()
-        }
-
-    }
-    
-    
-}

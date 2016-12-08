@@ -105,7 +105,23 @@ extension WBQAuthViewController:UIWebViewDelegate{
         print("授权码-----是\(code)")
         
 //        4.使用授权码 获取token
-        WBNetworkManager.shared.loadAccessToken(code: code)
+        WBNetworkManager.shared.loadAccessToken(code: code) { (isSuccess) in
+            if !isSuccess {
+               SVProgressHUD.showInfo(withStatus: "网络请求失败")
+            }else{
+                SVProgressHUD.showInfo(withStatus: "登录成功")
+
+//                登录成功，下一步做什么，跳转界面，如何跳转
+//                通过通知
+//                1.发送通知
+//                发送通知不关心有没有监听设备只负责发送通知
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: WBUserShouldLoginSuccessNotification),
+                                                object: nil)
+//                2.关闭窗口
+                self.close()
+                
+            }
+        }
 //        关于URL中的一些信息
 //        EG:meituan:///shouP1:P2:P3:P4/大西瓜/红牛/小樱桃/肥羊
 //        scheme：协议头--- meituan

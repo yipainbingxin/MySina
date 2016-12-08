@@ -13,7 +13,12 @@ class WBDiscoverViewController: WBBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+//        测试修改token
+//         WBNetworkManager.shared.userAccount.access_token = nil
+        
+        print("修改了token")
+    
+
     }
 
     override func didReceiveMemoryWarning() {

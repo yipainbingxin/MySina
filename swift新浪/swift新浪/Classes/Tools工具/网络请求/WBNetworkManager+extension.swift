@@ -35,15 +35,10 @@ extension WBNetworkManager{
                     return
             }
             completion(tResult["statuses"] as? [[String:Any]], isSuessess)
-            
         }
-
-
     }
-    
-    
-    
-    /// 返回微博的未读的数量
+   
+    /// 返回微博的未读的数量  ----定时刷新的，不需要提示是否失败
     func unReadCout(completion: @escaping (_ count: Int)->()) {
         
         guard let uid=userAccount.uid else {
@@ -62,8 +57,72 @@ extension WBNetworkManager{
             
             completion(count )
         }
-        
-        
+
     }
     
 }
+
+
+// MARK: -用户信息
+extension WBNetworkManager{
+    
+//    加载用户信息
+    func loadUserInfo(completion:@escaping (_ dict: [String :Any])->()) {
+        guard let uid = userAccount.uid else {
+            return
+        }
+        let urlString = "https://api.weibo.com/2/users/show.json"
+        
+        let parames = ["uid": uid]
+//        发起网络请求
+        tokenRequest(urlString: urlString, parameters: parames) { (json, isSuceess) in
+            print(json)
+        
+//            完成回调
+            completion((json as? [String :Any]) ?? [:])
+        
+        }
+
+    }
+    
+}
+
+// MARK: - QAuth相关方法
+extension WBNetworkManager{
+    //    加载accessToken
+    //    提问： 网络请求异步到底应该返回什么？---需要什么返回什么
+    
+    ///加载aceesstoken
+    ///
+    /// - parameter code:      授权码
+    /// - parameter comletion: 完成回调 是否成功
+    func loadAccessToken(code: String, comletion:@escaping (_ isSuccess: Bool)->()) {
+        let urlString = "https://api.weibo.com/oauth2/access_token"
+        
+        let parames = ["client_id":WBAppKey,"client_secret":WBAppSecret,"grant_type":"authorization_code","code":code,"redirect_uri":WBRedirect_uri,]
+        request(method: .POST, urlString: urlString, parameters: parames) { (json, isSucess) in
+            //            直接用字典设置useraccount的属性,如果请求失败，对用户数据不会用任何影响
+            self.userAccount.yy_modelSet(with: (json as? [String:Any]) ?? [:])
+            print(self.userAccount)
+            
+            
+//            加载用户信息
+           self.loadUserInfo(completion: { (dict) in
+            self.userAccount.yy_modelSet(with: dict)
+            print(self.userAccount)
+
+            //  保存模型
+            self.userAccount.saveAccount()
+            
+            // 完成回调
+            comletion(true)
+
+           })
+            
+        }
+        
+    }
+    
+    
+}
+

@@ -45,6 +45,14 @@ class WBBaseViewController: UIViewController{
         setUI()
         WBNetworkManager.shared.userLogin ?  loadData(): ()
         
+//        注册通知
+        NotificationCenter.default.addObserver(self, selector: #selector(loginSuccess), name: NSNotification.Name(rawValue: WBUserShouldLoginSuccessNotification), object: nil)
+        
+    }
+    
+    deinit {
+//        注销通知
+        NotificationCenter.default.removeObserver(self)
     }
     
 //    重写title
@@ -64,6 +72,26 @@ class WBBaseViewController: UIViewController{
 
 //MARK:------------访客视图监听方法。用户登录和用户注册
 extension WBBaseViewController{
+    
+    
+    /// 登录成功后的处理
+    @objc fileprivate func loginSuccess(n: Notification) {
+        print("登录成功\(n)")
+//        登录前左边是注册，右边是登录
+        navItem.leftBarButtonItem = nil
+        navItem.rightBarButtonItem = nil
+        
+        
+        
+//        更新UI将访客视图变成表格视图
+//        需要重新设置view
+//        在访问view的getter时，如果view==nil会调用viewdidload
+        view=nil
+        
+        //  注销通知 -》重新执行viewdidload会再次注册，避免通知重复注册
+        NotificationCenter.default.removeObserver(self)
+    }
+ 
    @objc fileprivate func login() {
 //    发送通知
     NotificationCenter.default.post(name: NSNotification.Name(rawValue: WBUserShouldLoginNotification), object: nil)
@@ -105,7 +133,8 @@ extension WBBaseViewController{
         
 //        设置内容缩进,设置上面和底部的缩进，tabbar默认的高度是49
         tableView?.contentInset=UIEdgeInsets(top: navigationBar.bounds.height, left: 0, bottom: tabBarController?.tabBar.bounds.height ?? 49, right: 0)
-        
+//        修改指示器的缩进  --强行解包是为了拿到一个必须的inset
+        tableView?.scrollIndicatorInsets = tableView!.contentInset
         
         
 //        设置刷新控件

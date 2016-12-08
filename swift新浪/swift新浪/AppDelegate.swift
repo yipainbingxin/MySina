@@ -8,28 +8,14 @@
 
 import UIKit
 import UserNotifications
+import SVProgressHUD
+import AFNetworking
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//
-//        询问用户是否授权
-        if #available(iOS 10.0, *) {
-            UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound]) { (isSuccess, error) in
+                setUpAddionts()
 
-                let str  = isSuccess ? "成功" : "失败"
-                print(str)
-            }
-        } else {
-            // Fallback on earlier versions
-            //        取消用户授权显示通知（上面的提示条、声音、badgeNumber）
-            let notifySettings = UIUserNotificationSettings(types: [.alert,.badge,.sound], categories: nil)
-            application.registerUserNotificationSettings(notifySettings)
-            
-
-        }
-        
-        
         
         
         sleep(2)
@@ -54,6 +40,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //    mainviewcontroller：
     //    加载main.json---bundle里面是固定的，不会变化；程序第一次运行需要快速显示第一个界     面给用户
     //    有数据后设置控制器
+}
+
+
+// MARK: - 设置应用程序额外信息
+extension AppDelegate{
+   fileprivate func setUpAddionts() {
+//    1.设置SVProgressHUD最小的解除时间
+    SVProgressHUD.setMinimumDismissTimeInterval(1)
+//2.设置网络加载指示器
+    AFNetworkActivityIndicatorManager.shared().isEnabled=true
+    
+    
+//    3.设置用户授权显示通知
+    //        询问用户是否授权
+    if #available(iOS 10.0, *) {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound]) { (isSuccess, error) in
+            
+            let str  = isSuccess ? "成功" : "失败"
+            print(str)
+        }
+    } else {
+        // Fallback on earlier versions
+        //        取消用户授权显示通知（上面的提示条、声音、badgeNumber）
+        let notifySettings = UIUserNotificationSettings(types: [.alert,.badge,.sound], categories: nil)
+        UIApplication.shared.registerUserNotificationSettings(notifySettings)
+        
+        
+    }
+    
+    
+
+    }
+    
+    
 }
 //MARK: 从服务器 加载应用程序信息
 extension AppDelegate{
@@ -102,3 +122,17 @@ extension AppDelegate{
 //    1.抽取单利
 //    2.请求的token隔离出来
 }
+
+
+//登录成功后需要的一些操作
+//token失效的处理：将两个fixme发送通知 ：token ==nil 发送通知不带对象
+//网络请求statecode=403： 发送通知携带对象，对象本身没有意义，用于判断是否显示窗口
+
+//WBMainViewController 通知监听方法：判断通知是否有对象，如果有对象设置SVProgressHUD的样式
+//设置延迟时间，如果没有对象，直接展现登录控制器
+//1.导航栏左右按钮、注册按钮的清除
+//2.表格视图的指示器的缩进
+//3.SVProgressHUD解除时长
+//4.AFN指示器的显示
+
+

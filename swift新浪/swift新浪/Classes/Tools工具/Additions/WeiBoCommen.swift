@@ -16,4 +16,6 @@ let WBAppSecret = "b0a6ba80bcee13fde431e2862f4c5514"
 let WBRedirect_uri = "http://baidu.com"
 // MARK:   全局通知定义
 let WBUserShouldLoginNotification = "WBUserShouldLoginNotification"
-		
+//用户登录成功通知
+let WBUserShouldLoginSuccessNotification = "WBUserShouldLoginSuccessNotification"
+

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 class WBMainViewController: UITabBarController {
 //定时器
     fileprivate var timer: Timer?
@@ -30,15 +30,33 @@ class WBMainViewController: UITabBarController {
         
     }
     
+    
     // MARK:=------------J监听方法，用户登录
    @objc fileprivate func userLogin(n:Notification) {
      print("\(n)")
     
-//    展现登录的控制器---通常会和UInavicontroller连用，方便返回
-    let  vc = WBQAuthViewController()
-    let nav = UINavigationController(rootViewController: vc)
+//    判断N的object是否有值，如果有值，提示用户重新登录
+    var when = DispatchTime.now()
     
-    present(nav, animated: true, completion: nil)
+    if n.object != nil {
+//    设置指示器的渐变样式
+        SVProgressHUD.setDefaultMaskType(.gradient)
+        SVProgressHUD.showInfo(withStatus: "用户登录已超时，请重新登录")
+        
+        
+        when=DispatchTime.now()+2
+    }
+    
+    DispatchQueue.main.asyncAfter(deadline: when) {
+        //    展现登录的控制器---通常会和UInavicontroller连用，方便返回
+        SVProgressHUD.setDefaultMaskType(.clear)
+        let  vc = WBQAuthViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        
+        self.present(nav, animated: true, completion: nil)
+
+    }
+    
     
     }
     
@@ -113,9 +131,7 @@ extension WBMainViewController{
     
 //    时间间隔建议写长一些
     timer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
-    
-    
-        
+            
     }
     
 //    MARK: 时钟撰写方法
@@ -128,10 +144,11 @@ extension WBMainViewController{
     WBNetworkManager.shared.unReadCout { (count) in
         
 //        设置app的badnumber,从iOS8之后需要用户授权才能接收到
-        UIApplication.shared.applicationIconBadgeNumber=3
+        UIApplication.shared.applicationIconBadgeNumber = count
+        self.tabBar.items?[0].badgeValue = "\(count)"
+
     }
-    self.tabBar.items?[0].badgeValue = "3"
-    UIApplication.shared.applicationIconBadgeNumber=3
+//    UIApplication.shared.applicationIconBadgeNumber = count
     }
     
 }

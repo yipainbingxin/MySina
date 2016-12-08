@@ -10,6 +10,9 @@
 		D313FAD81DF7BB58008C5E64 /* WBUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D313FAD71DF7BB58008C5E64 /* WBUserAccount.swift */; };
 		D313FAE71DF7E795008C5E64 /* NSString+ExtentionPath.m in Sources */ = {isa = PBXBuildFile; fileRef = D313FAE61DF7E795008C5E64 /* NSString+ExtentionPath.m */; };
 		D318F2F91DED6804009F0F33 /* WBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D318F2F81DED6804009F0F33 /* WBStatus.swift */; };
+		D3230DB21DF9434100F76156 /* 042.png in Resources */ = {isa = PBXBuildFile; fileRef = D3230DB11DF9434100F76156 /* 042.png */; };
+		D3230DB41DF9434B00F76156 /* 043.png in Resources */ = {isa = PBXBuildFile; fileRef = D3230DB31DF9434B00F76156 /* 043.png */; };
+		D3230DB71DF9451A00F76156 /* WBTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230DB61DF9451A00F76156 /* WBTitleButton.swift */; };
 		D3404DED1DED20F70023D6E9 /* WBNetworkManager+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3404DEC1DED20F70023D6E9 /* WBNetworkManager+extension.swift */; };
 		D3E2AA6F1DF53CE200C1AEEE /* Bundel+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E2AA6A1DF53CE200C1AEEE /* Bundel+extension.swift */; };
 		D3E2AA701DF53CE200C1AEEE /* UIBarButtonItem+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E2AA6B1DF53CE200C1AEEE /* UIBarButtonItem+extension.swift */; };
@@ -81,6 +84,9 @@
 		D313FAE51DF7E795008C5E64 /* NSString+ExtentionPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ExtentionPath.h"; sourceTree = "<group>"; };
 		D313FAE61DF7E795008C5E64 /* NSString+ExtentionPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExtentionPath.m"; sourceTree = "<group>"; };
 		D318F2F81DED6804009F0F33 /* WBStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatus.swift; sourceTree = "<group>"; };
+		D3230DB11DF9434100F76156 /* 042.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 042.png; sourceTree = "<group>"; };
+		D3230DB31DF9434B00F76156 /* 043.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 043.png; sourceTree = "<group>"; };
+		D3230DB61DF9451A00F76156 /* WBTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTitleButton.swift; sourceTree = "<group>"; };
 		D3404DEC1DED20F70023D6E9 /* WBNetworkManager+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WBNetworkManager+extension.swift"; sourceTree = "<group>"; };
 		D3E2AA6A1DF53CE200C1AEEE /* Bundel+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundel+extension.swift"; sourceTree = "<group>"; };
 		D3E2AA6B1DF53CE200C1AEEE /* UIBarButtonItem+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+extension.swift"; sourceTree = "<group>"; };
@@ -187,6 +193,23 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		D3230DB01DF9432A00F76156 /* titleViewImage */ = {
+			isa = PBXGroup;
+			children = (
+				D3230DB11DF9434100F76156 /* 042.png */,
+				D3230DB31DF9434B00F76156 /* 043.png */,
+			);
+			path = titleViewImage;
+			sourceTree = "<group>";
+		};
+		D3230DB51DF944F100F76156 /* tittleButton */ = {
+			isa = PBXGroup;
+			children = (
+				D3230DB61DF9451A00F76156 /* WBTitleButton.swift */,
+			);
+			path = tittleButton;
+			sourceTree = "<group>";
+		};
 		D3E2AA691DF53CE200C1AEEE /* Additions */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +235,7 @@
 		D3E875F01DEC108B009A6BF2 = {
 			isa = PBXGroup;
 			children = (
+				D3230DB01DF9432A00F76156 /* titleViewImage */,
 				D3E8762A1DEC113A009A6BF2 /* loginFore */,
 				D3E8762D1DEC113A009A6BF2 /* tabbar2 */,
 				D3E875FB1DEC108C009A6BF2 /* swift新浪 */,
@@ -418,6 +442,7 @@
 		D3E882421DEC1208009A6BF2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D3230DB51DF944F100F76156 /* tittleButton */,
 				D3E882431DEC1208009A6BF2 /* WBHomeViewController.swift */,
 			);
 			path = Home;
@@ -594,11 +619,13 @@
 				D3E8821F1DEC113F009A6BF2 /* 首页@3x.png in Resources */,
 				D3E882641DEC1521009A6BF2 /* main.json in Resources */,
 				D3E87DFD1DEC113C009A6BF2 /* 订单2@3x.png in Resources */,
+				D3230DB41DF9434B00F76156 /* 043.png in Resources */,
 				D3E87DFC1DEC113C009A6BF2 /* 订单2@2x.png in Resources */,
 				D3E87DF41DEC113C009A6BF2 /* shouye-icon@2x.png in Resources */,
 				D3E87DF71DEC113C009A6BF2 /* wo-d@3x.png in Resources */,
 				D3E87DFA1DEC113C009A6BF2 /* 订单@2x.png in Resources */,
 				D3E87DFF1DEC113C009A6BF2 /* 钱包@3x.png in Resources */,
+				D3230DB21DF9434100F76156 /* 042.png in Resources */,
 				D3E876041DEC108C009A6BF2 /* Assets.xcassets in Resources */,
 				D3E87DF51DEC113C009A6BF2 /* shouye-icon@3x.png in Resources */,
 				D3E8821E1DEC113F009A6BF2 /* 首页@2x.png in Resources */,
@@ -683,6 +710,7 @@
 				D3E2AA721DF53CE200C1AEEE /* WeiBoCommen.swift in Sources */,
 				D3E875FD1DEC108C009A6BF2 /* AppDelegate.swift in Sources */,
 				D313FAD81DF7BB58008C5E64 /* WBUserAccount.swift in Sources */,
+				D3230DB71DF9451A00F76156 /* WBTitleButton.swift in Sources */,
 				D3404DED1DED20F70023D6E9 /* WBNetworkManager+extension.swift in Sources */,
 				D3E882681DEC1521009A6BF2 /* WBMainViewController.swift in Sources */,
 				D3E2AA781DF5436C00C1AEEE /* WBQAuthViewController.swift in Sources */,

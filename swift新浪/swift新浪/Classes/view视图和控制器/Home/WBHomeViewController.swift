@@ -18,11 +18,7 @@ class WBHomeViewController: WBBaseViewController {
 //    列表视图模型
     fileprivate lazy var listViewModel = WBStatusListViewModel()
     
-    
-    
-    
-    
-    
+  
     
     //    加载数据
     override func loadData() {
@@ -101,6 +97,24 @@ extension WBHomeViewController{
         
         //        注册原型cell
         tableView?.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+    setUpNavTitle()
+    
+    }
+    
+    
+//    设置导航栏标题
+    func setUpNavTitle() {
+        
+        let title = WBNetworkManager.shared.userAccount.screen_name
+        let button = WBTitleButton(title: title)
+        button.addTarget(self, action: #selector(clickTitleButton), for: .touchUpInside)
+        navItem.titleView=button
+
+    }
+    
+    @objc fileprivate func clickTitleButton(btn: UIButton) {
+    
+    btn.isSelected = !btn.isSelected
     }
     
 }
