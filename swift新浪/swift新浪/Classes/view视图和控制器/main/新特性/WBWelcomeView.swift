@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 //欢迎界面
 class WBWelcomeView: UIView {
     @IBOutlet weak var bottomConstrain: NSLayoutConstraint!
@@ -24,8 +25,36 @@ class WBWelcomeView: UIView {
         v.frame=UIScreen.main.bounds
         
         return v
+    }
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+//    提示：initwithcoder只是刚刚从xib 的二进制文件将视图加载完成
+//        还没有和代码连线建立起联系，所以开发时，千万不要在这个方法中处理UI
+        print("initwithcoder----+\(iconView)")
+    }
+    override func awakeFromNib() {
+
+//        1.url 
+        
+        guard  let urlString = WBNetworkManager.shared.userAccount.avatar_large,let url = URL(string: urlString )else {
+
+            return
+        }
+//        2.设置头像,--如果没有网络图像没有下载完成，先显示占位头像
+//        如果不设置占位头像，之前设置的图像会被清空
+        print(url)
+
+        iconView.sd_setImage(with: url, placeholderImage: UIImage(named: "avender_pepole"))
+        
+        
         
     }
+    
+    
+    
     
 //    自动布局系统更新完成约束后。会自动调用此方法
 //    通常是对子视图布局进行修改
@@ -46,9 +75,15 @@ class WBWelcomeView: UIView {
         UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: [], animations: {
             //    更新约束
             self.layoutIfNeeded()
-            self.tipLab.alpha=1;
             }) { (_) in
 
+                UIView.animate(withDuration: 1.0, animations: { 
+                    self.tipLab.alpha=1;
+                    }, completion: { (_) in
+                        
+                })
+                
+                
         }
     
     
