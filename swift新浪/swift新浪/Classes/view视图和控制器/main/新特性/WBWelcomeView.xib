@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WBWelcomeView" customModule="swift新浪" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome" translatesAutoresizingMaskIntoConstraints="NO" id="Hdd-aW-444"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avender_pepole" translatesAutoresizingMaskIntoConstraints="NO" id="aqn-CU-dLD">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="85" id="AAi-px-9bJ"/>
+                        <constraint firstAttribute="height" constant="85" id="kSI-6i-hTQ"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎归来" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBN-UG-fbP">
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aqn-CU-dLD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="04e-NG-Vt0"/>
+                <constraint firstItem="bBN-UG-fbP" firstAttribute="top" secondItem="aqn-CU-dLD" secondAttribute="bottom" constant="8" id="MHV-g9-hWY"/>
+                <constraint firstAttribute="bottom" secondItem="aqn-CU-dLD" secondAttribute="bottom" constant="160" id="NsG-0b-x7L"/>
+                <constraint firstItem="bBN-UG-fbP" firstAttribute="centerX" secondItem="aqn-CU-dLD" secondAttribute="centerX" id="SZP-4h-Oz4"/>
+                <constraint firstAttribute="trailing" secondItem="Hdd-aW-444" secondAttribute="trailing" id="Ttp-57-QnN"/>
+                <constraint firstAttribute="bottom" secondItem="Hdd-aW-444" secondAttribute="bottom" id="bGC-em-FxI"/>
+                <constraint firstItem="Hdd-aW-444" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="u0d-H1-E7c"/>
+                <constraint firstItem="Hdd-aW-444" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="v6l-OH-3xU"/>
+                <constraint firstItem="aqn-CU-dLD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xLF-a9-3kw"/>
+            </constraints>
+            <connections>
+                <outlet property="bottomConstrain" destination="NsG-0b-x7L" id="NZq-86-2fG"/>
+                <outlet property="iconView" destination="aqn-CU-dLD" id="MNK-kg-J5c"/>
+                <outlet property="tipLab" destination="bBN-UG-fbP" id="vPZ-pB-5Sf"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="116.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="avender_pepole" width="30" height="30"/>
+        <image name="welcome" width="640" height="772"/>
+    </resources>
+</document>

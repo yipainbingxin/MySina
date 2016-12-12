@@ -106,6 +106,7 @@ extension WBHomeViewController{
     func setUpNavTitle() {
         
         let title = WBNetworkManager.shared.userAccount.screen_name
+        
         let button = WBTitleButton(title: title)
         button.addTarget(self, action: #selector(clickTitleButton), for: .touchUpInside)
         navItem.titleView=button

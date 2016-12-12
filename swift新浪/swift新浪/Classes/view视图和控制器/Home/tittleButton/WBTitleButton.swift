@@ -18,14 +18,16 @@ class WBTitleButton: UIButton {
         if title == nil {
             setTitle("首页", for: [])
         }else{
-            setTitle(title, for: [])
+            setTitle(title!+"  ", for: [])
             //        设置图像
             setImage(UIImage(named:"043"), for: [])
             setImage(UIImage(named:"042"), for: .selected)
- 
+
         }
+//        2.设置字体颜色使字体加粗
         titleLabel?.font=UIFont.boldSystemFont(ofSize: 17)
         setTitleColor(UIColor.darkGray, for: [])
+//        3.设置大小
         sizeToFit()
 
     }
@@ -44,7 +46,7 @@ class WBTitleButton: UIButton {
 //        将titleLabel的x向左移动imageview宽度
          titleLabel.frame=titleLabel.frame.offsetBy(dx: -imageView.bounds.width, dy: 0)
         // 将imageview的x向右移动titleLabel宽度
-        imageView.frame=imageView.frame.offsetBy(dx: titleLabel.bounds.width, dy: 0)
+        imageView.frame=imageView.frame.offsetBy(dx: titleLabel.frame.size.width, dy: 0)
         
         print("调整按钮布局--\(titleLabel)--\(imageView)")
 

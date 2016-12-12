@@ -22,6 +22,8 @@ class WBMainViewController: UITabBarController {
         
         setUpTimer()
         
+        setUpNewFeatureView();
+        
         
 //        设置代理
         delegate=self
@@ -85,6 +87,57 @@ class WBMainViewController: UITabBarController {
 //    MARK:----------------私有控件
 //    撰写按钮
   fileprivate  lazy var composeButton:UIButton = UIButton()
+}
+
+
+
+// MARK: - -------新特性视图处理
+extension WBMainViewController{
+//    设置新特性视图
+   fileprivate  func setUpNewFeatureView() {
+    //   判断是否登录
+//    if  WBNetworkManager.shared.userLogin{
+//        return
+//    }
+    
+    
+//    1.j检查版本是否更新
+//    2.如果更新，显示新特性，否则显示欢迎
+//    3.添加视图
+    let v = isNewVersiong ? WBFeatureView() :WBWelcomeView.welcomeView()
+//    v.frame=view.bounds
+//    添加视图
+    view.addSubview(v)
+    
+        
+    }
+    
+    
+  ///extenstion中可以有计算型属性，不会占用内存空间
+//    构造函数给属性分配空间
+//    在AppStore每次升级应用程序，版本号都需要增加，不能递减
+//    在组成主版本号，次版本号，修订版本号
+//    主版本号：意味着大的修改，使用者需要大的适应
+//    此版本号：意味着晓得修改，某些函数和方法的使用或者参数的变化
+//    修订版本号：框架/程序内部bug的修订，不会对使用者造成任何的影响
+  fileprivate var isNewVersiong : Bool{
+//    1.取当前的版本号1.0.1
+    let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+    print(currentVersion)
+    
+//    2.取保存在document（iTunes备份）最理想保存在用户偏好设置，目录中之前的版本号
+    let path: String = ("version" as NSString).cz_appendDocumentDir()
+    let sandBoxVersion = (try? String(contentsOfFile: path)) ?? ""
+    print(sandBoxVersion)
+//    3.将当前版本号保存在沙盒
+   _ = try? currentVersion.write(toFile: path, atomically: true, encoding: .utf8)
+//    4.返回两个版本号是否一致   no   new
+    print(path)
+    return currentVersion != sandBoxVersion
+    }
+    
+    
+    
 }
 
 // MARK: - UITabBarControllerDelegate tabbar的代理方法

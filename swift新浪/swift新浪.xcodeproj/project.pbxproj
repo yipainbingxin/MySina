@@ -14,6 +14,15 @@
 		D3230DB41DF9434B00F76156 /* 043.png in Resources */ = {isa = PBXBuildFile; fileRef = D3230DB31DF9434B00F76156 /* 043.png */; };
 		D3230DB71DF9451A00F76156 /* WBTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230DB61DF9451A00F76156 /* WBTitleButton.swift */; };
 		D3404DED1DED20F70023D6E9 /* WBNetworkManager+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3404DEC1DED20F70023D6E9 /* WBNetworkManager+extension.swift */; };
+		D35B032B1DFA979C00C3B23A /* WBWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B032A1DFA979C00C3B23A /* WBWelcomeView.swift */; };
+		D35B032D1DFA984400C3B23A /* WBFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B032C1DFA984400C3B23A /* WBFeatureView.swift */; };
+		D35B03351DFA98DA00C3B23A /* main.json in Resources */ = {isa = PBXBuildFile; fileRef = D35B032F1DFA98DA00C3B23A /* main.json */; };
+		D35B03361DFA98DA00C3B23A /* WBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B03301DFA98DA00C3B23A /* WBBaseViewController.swift */; };
+		D35B03371DFA98DA00C3B23A /* WBComposeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B03311DFA98DA00C3B23A /* WBComposeButton.swift */; };
+		D35B03381DFA98DA00C3B23A /* WBDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B03321DFA98DA00C3B23A /* WBDemoViewController.swift */; };
+		D35B03391DFA98DA00C3B23A /* WBMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B03331DFA98DA00C3B23A /* WBMainViewController.swift */; };
+		D35B033A1DFA98DA00C3B23A /* WBNvcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B03341DFA98DA00C3B23A /* WBNvcViewController.swift */; };
+		D35B033C1DFAA4B600C3B23A /* WBWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35B033B1DFAA4B600C3B23A /* WBWelcomeView.xib */; };
 		D3E2AA6F1DF53CE200C1AEEE /* Bundel+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E2AA6A1DF53CE200C1AEEE /* Bundel+extension.swift */; };
 		D3E2AA701DF53CE200C1AEEE /* UIBarButtonItem+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E2AA6B1DF53CE200C1AEEE /* UIBarButtonItem+extension.swift */; };
 		D3E2AA711DF53CE200C1AEEE /* UIScreen+WBUIScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E2AA6D1DF53CE200C1AEEE /* UIScreen+WBUIScreen.m */; };
@@ -45,13 +54,7 @@
 		D3E8824E1DEC1208009A6BF2 /* WBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E882431DEC1208009A6BF2 /* WBHomeViewController.swift */; };
 		D3E882521DEC1208009A6BF2 /* WBMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E882491DEC1208009A6BF2 /* WBMessageViewController.swift */; };
 		D3E882531DEC1208009A6BF2 /* WBPodfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8824B1DEC1208009A6BF2 /* WBPodfileViewController.swift */; };
-		D3E882641DEC1521009A6BF2 /* main.json in Resources */ = {isa = PBXBuildFile; fileRef = D3E8825D1DEC1521009A6BF2 /* main.json */; };
 		D3E882651DEC1521009A6BF2 /* WBVistorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8825F1DEC1521009A6BF2 /* WBVistorView.swift */; };
-		D3E882661DEC1521009A6BF2 /* WBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E882601DEC1521009A6BF2 /* WBBaseViewController.swift */; };
-		D3E882671DEC1521009A6BF2 /* WBDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E882611DEC1521009A6BF2 /* WBDemoViewController.swift */; };
-		D3E882681DEC1521009A6BF2 /* WBMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E882621DEC1521009A6BF2 /* WBMainViewController.swift */; };
-		D3E882691DEC1521009A6BF2 /* WBNvcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E882631DEC1521009A6BF2 /* WBNvcViewController.swift */; };
-		D3E8826E1DEC1678009A6BF2 /* WBComposeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8826D1DEC1678009A6BF2 /* WBComposeButton.swift */; };
 		D3E882741DEC1BCF009A6BF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3E882731DEC1BCF009A6BF2 /* Images.xcassets */; };
 		D3E882781DEC1F56009A6BF2 /* WBNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E882771DEC1F56009A6BF2 /* WBNetworkManager.swift */; };
 		D3E8827A1DEC2D13009A6BF2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E882791DEC2D13009A6BF2 /* Security.framework */; };
@@ -88,6 +91,15 @@
 		D3230DB31DF9434B00F76156 /* 043.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 043.png; sourceTree = "<group>"; };
 		D3230DB61DF9451A00F76156 /* WBTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTitleButton.swift; sourceTree = "<group>"; };
 		D3404DEC1DED20F70023D6E9 /* WBNetworkManager+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WBNetworkManager+extension.swift"; sourceTree = "<group>"; };
+		D35B032A1DFA979C00C3B23A /* WBWelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBWelcomeView.swift; sourceTree = "<group>"; };
+		D35B032C1DFA984400C3B23A /* WBFeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBFeatureView.swift; sourceTree = "<group>"; };
+		D35B032F1DFA98DA00C3B23A /* main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main.json; sourceTree = "<group>"; };
+		D35B03301DFA98DA00C3B23A /* WBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBBaseViewController.swift; sourceTree = "<group>"; };
+		D35B03311DFA98DA00C3B23A /* WBComposeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeButton.swift; sourceTree = "<group>"; };
+		D35B03321DFA98DA00C3B23A /* WBDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDemoViewController.swift; sourceTree = "<group>"; };
+		D35B03331DFA98DA00C3B23A /* WBMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMainViewController.swift; sourceTree = "<group>"; };
+		D35B03341DFA98DA00C3B23A /* WBNvcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNvcViewController.swift; sourceTree = "<group>"; };
+		D35B033B1DFAA4B600C3B23A /* WBWelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBWelcomeView.xib; sourceTree = "<group>"; };
 		D3E2AA6A1DF53CE200C1AEEE /* Bundel+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundel+extension.swift"; sourceTree = "<group>"; };
 		D3E2AA6B1DF53CE200C1AEEE /* UIBarButtonItem+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+extension.swift"; sourceTree = "<group>"; };
 		D3E2AA6C1DF53CE200C1AEEE /* UIScreen+WBUIScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+WBUIScreen.h"; sourceTree = "<group>"; };
@@ -95,7 +107,7 @@
 		D3E2AA6E1DF53CE200C1AEEE /* WeiBoCommen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiBoCommen.swift; sourceTree = "<group>"; };
 		D3E2AA771DF5436C00C1AEEE /* WBQAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBQAuthViewController.swift; sourceTree = "<group>"; };
 		D3E875F91DEC108C009A6BF2 /* swift新浪.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift新浪.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3E875FC1DEC108C009A6BF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../AppDelegate.swift; sourceTree = "<group>"; };
+		D3E875FC1DEC108C009A6BF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../../AppDelegate.swift; sourceTree = "<group>"; };
 		D3E876011DEC108C009A6BF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3E876031DEC108C009A6BF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3E876081DEC108C009A6BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,13 +138,7 @@
 		D3E882431DEC1208009A6BF2 /* WBHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomeViewController.swift; sourceTree = "<group>"; };
 		D3E882491DEC1208009A6BF2 /* WBMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMessageViewController.swift; sourceTree = "<group>"; };
 		D3E8824B1DEC1208009A6BF2 /* WBPodfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPodfileViewController.swift; sourceTree = "<group>"; };
-		D3E8825D1DEC1521009A6BF2 /* main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main.json; sourceTree = "<group>"; };
 		D3E8825F1DEC1521009A6BF2 /* WBVistorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVistorView.swift; sourceTree = "<group>"; };
-		D3E882601DEC1521009A6BF2 /* WBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBBaseViewController.swift; sourceTree = "<group>"; };
-		D3E882611DEC1521009A6BF2 /* WBDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDemoViewController.swift; sourceTree = "<group>"; };
-		D3E882621DEC1521009A6BF2 /* WBMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMainViewController.swift; sourceTree = "<group>"; };
-		D3E882631DEC1521009A6BF2 /* WBNvcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNvcViewController.swift; sourceTree = "<group>"; };
-		D3E8826D1DEC1678009A6BF2 /* WBComposeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeButton.swift; sourceTree = "<group>"; };
 		D3E882721DEC17DE009A6BF2 /* swift新浪-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "swift新浪-Bridging-Header.h"; path = "../swift新浪/Classes/Tools工具/swift新浪-Bridging-Header.h"; sourceTree = "<group>"; };
 		D3E882731DEC1BCF009A6BF2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D3E882771DEC1F56009A6BF2 /* WBNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNetworkManager.swift; sourceTree = "<group>"; };
@@ -208,6 +214,30 @@
 				D3230DB61DF9451A00F76156 /* WBTitleButton.swift */,
 			);
 			path = tittleButton;
+			sourceTree = "<group>";
+		};
+		D35B03291DFA960B00C3B23A /* 新特性 */ = {
+			isa = PBXGroup;
+			children = (
+				D35B032A1DFA979C00C3B23A /* WBWelcomeView.swift */,
+				D35B033B1DFAA4B600C3B23A /* WBWelcomeView.xib */,
+				D35B032C1DFA984400C3B23A /* WBFeatureView.swift */,
+			);
+			path = "新特性";
+			sourceTree = "<group>";
+		};
+		D35B032E1DFA98DA00C3B23A /* 主控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				D3E875FC1DEC108C009A6BF2 /* AppDelegate.swift */,
+				D35B032F1DFA98DA00C3B23A /* main.json */,
+				D35B03301DFA98DA00C3B23A /* WBBaseViewController.swift */,
+				D35B03311DFA98DA00C3B23A /* WBComposeButton.swift */,
+				D35B03321DFA98DA00C3B23A /* WBDemoViewController.swift */,
+				D35B03331DFA98DA00C3B23A /* WBMainViewController.swift */,
+				D35B03341DFA98DA00C3B23A /* WBNvcViewController.swift */,
+			);
+			path = "主控制器";
 			sourceTree = "<group>";
 		};
 		D3E2AA691DF53CE200C1AEEE /* Additions */ = {
@@ -467,15 +497,10 @@
 		D3E8825C1DEC1521009A6BF2 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				D35B032E1DFA98DA00C3B23A /* 主控制器 */,
+				D35B03291DFA960B00C3B23A /* 新特性 */,
 				D3E2AA731DF542B800C1AEEE /* QAuth */,
-				D3E875FC1DEC108C009A6BF2 /* AppDelegate.swift */,
-				D3E8826D1DEC1678009A6BF2 /* WBComposeButton.swift */,
-				D3E8825D1DEC1521009A6BF2 /* main.json */,
 				D3E8825E1DEC1521009A6BF2 /* vistorView */,
-				D3E882601DEC1521009A6BF2 /* WBBaseViewController.swift */,
-				D3E882611DEC1521009A6BF2 /* WBDemoViewController.swift */,
-				D3E882621DEC1521009A6BF2 /* WBMainViewController.swift */,
-				D3E882631DEC1521009A6BF2 /* WBNvcViewController.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -563,6 +588,7 @@
 		D3E875F11DEC108C009A6BF2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WB;
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = hzmohe;
@@ -615,9 +641,10 @@
 				D3E87E001DEC113C009A6BF2 /* 钱包2@2x.png in Resources */,
 				D3E87DFB1DEC113C009A6BF2 /* 订单@3x.png in Resources */,
 				D3E87DF81DEC113C009A6BF2 /* 我的@2x.png in Resources */,
+				D35B03351DFA98DA00C3B23A /* main.json in Resources */,
+				D35B033C1DFAA4B600C3B23A /* WBWelcomeView.xib in Resources */,
 				D3E87DF21DEC113C009A6BF2 /* 1-4.png in Resources */,
 				D3E8821F1DEC113F009A6BF2 /* 首页@3x.png in Resources */,
-				D3E882641DEC1521009A6BF2 /* main.json in Resources */,
 				D3E87DFD1DEC113C009A6BF2 /* 订单2@3x.png in Resources */,
 				D3230DB41DF9434B00F76156 /* 043.png in Resources */,
 				D3E87DFC1DEC113C009A6BF2 /* 订单2@2x.png in Resources */,
@@ -712,22 +739,24 @@
 				D313FAD81DF7BB58008C5E64 /* WBUserAccount.swift in Sources */,
 				D3230DB71DF9451A00F76156 /* WBTitleButton.swift in Sources */,
 				D3404DED1DED20F70023D6E9 /* WBNetworkManager+extension.swift in Sources */,
-				D3E882681DEC1521009A6BF2 /* WBMainViewController.swift in Sources */,
+				D35B032B1DFA979C00C3B23A /* WBWelcomeView.swift in Sources */,
+				D35B03361DFA98DA00C3B23A /* WBBaseViewController.swift in Sources */,
 				D3E2AA781DF5436C00C1AEEE /* WBQAuthViewController.swift in Sources */,
 				D3E2AA711DF53CE200C1AEEE /* UIScreen+WBUIScreen.m in Sources */,
 				D3E8824E1DEC1208009A6BF2 /* WBHomeViewController.swift in Sources */,
-				D3E8826E1DEC1678009A6BF2 /* WBComposeButton.swift in Sources */,
 				D3E2AA6F1DF53CE200C1AEEE /* Bundel+extension.swift in Sources */,
 				D318F2F91DED6804009F0F33 /* WBStatus.swift in Sources */,
-				D3E882661DEC1521009A6BF2 /* WBBaseViewController.swift in Sources */,
+				D35B03391DFA98DA00C3B23A /* WBMainViewController.swift in Sources */,
 				D3E882781DEC1F56009A6BF2 /* WBNetworkManager.swift in Sources */,
-				D3E882691DEC1521009A6BF2 /* WBNvcViewController.swift in Sources */,
+				D35B033A1DFA98DA00C3B23A /* WBNvcViewController.swift in Sources */,
 				D3E882521DEC1208009A6BF2 /* WBMessageViewController.swift in Sources */,
+				D35B032D1DFA984400C3B23A /* WBFeatureView.swift in Sources */,
 				D3E882651DEC1521009A6BF2 /* WBVistorView.swift in Sources */,
-				D3E882671DEC1521009A6BF2 /* WBDemoViewController.swift in Sources */,
+				D35B03371DFA98DA00C3B23A /* WBComposeButton.swift in Sources */,
 				D3E882531DEC1208009A6BF2 /* WBPodfileViewController.swift in Sources */,
 				D313FAE71DF7E795008C5E64 /* NSString+ExtentionPath.m in Sources */,
 				D3E9CE131DF66AD200DFB9B5 /* WBStatusListViewModel.swift in Sources */,
+				D35B03381DFA98DA00C3B23A /* WBDemoViewController.swift in Sources */,
 				D3E8824D1DEC1208009A6BF2 /* WBDiscoverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
