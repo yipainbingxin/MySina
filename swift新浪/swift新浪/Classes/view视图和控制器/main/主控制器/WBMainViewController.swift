@@ -96,15 +96,15 @@ extension WBMainViewController{
 //    设置新特性视图
    fileprivate  func setUpNewFeatureView() {
     //   判断是否登录
-//    if  WBNetworkManager.shared.userLogin{
-//        return
-//    }
+    if  !WBNetworkManager.shared.userLogin{
+        return
+    }
     
     
 //    1.j检查版本是否更新
 //    2.如果更新，显示新特性，否则显示欢迎
 //    3.添加视图
-    let v = isNewVersiong ? WBFeatureView() :WBWelcomeView.welcomeView()
+    let v = isNewVersiong ? WBFeatureView.newFeature() :WBWelcomeView.welcomeView()
 //    v.frame=view.bounds
 //    添加视图
     view.addSubview(v)
@@ -133,7 +133,9 @@ extension WBMainViewController{
    _ = try? currentVersion.write(toFile: path, atomically: true, encoding: .utf8)
 //    4.返回两个版本号是否一致   no   new
     print(path)
-    return currentVersion != sandBoxVersion
+//    return currentVersion != sandBoxVersion
+    return currentVersion == sandBoxVersion
+
     }
     
     

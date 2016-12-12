@@ -28,6 +28,7 @@
 		D3E2AA711DF53CE200C1AEEE /* UIScreen+WBUIScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E2AA6D1DF53CE200C1AEEE /* UIScreen+WBUIScreen.m */; };
 		D3E2AA721DF53CE200C1AEEE /* WeiBoCommen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E2AA6E1DF53CE200C1AEEE /* WeiBoCommen.swift */; };
 		D3E2AA781DF5436C00C1AEEE /* WBQAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E2AA771DF5436C00C1AEEE /* WBQAuthViewController.swift */; };
+		D3E3D8271DFE79790048C795 /* WBFeatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E3D8261DFE79790048C795 /* WBFeatureView.xib */; };
 		D3E875FD1DEC108C009A6BF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E875FC1DEC108C009A6BF2 /* AppDelegate.swift */; };
 		D3E876021DEC108C009A6BF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3E876001DEC108C009A6BF2 /* Main.storyboard */; };
 		D3E876041DEC108C009A6BF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3E876031DEC108C009A6BF2 /* Assets.xcassets */; };
@@ -106,6 +107,7 @@
 		D3E2AA6D1DF53CE200C1AEEE /* UIScreen+WBUIScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+WBUIScreen.m"; sourceTree = "<group>"; };
 		D3E2AA6E1DF53CE200C1AEEE /* WeiBoCommen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiBoCommen.swift; sourceTree = "<group>"; };
 		D3E2AA771DF5436C00C1AEEE /* WBQAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBQAuthViewController.swift; sourceTree = "<group>"; };
+		D3E3D8261DFE79790048C795 /* WBFeatureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBFeatureView.xib; sourceTree = "<group>"; };
 		D3E875F91DEC108C009A6BF2 /* swift新浪.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift新浪.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E875FC1DEC108C009A6BF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../../AppDelegate.swift; sourceTree = "<group>"; };
 		D3E876011DEC108C009A6BF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				D35B032A1DFA979C00C3B23A /* WBWelcomeView.swift */,
 				D35B033B1DFAA4B600C3B23A /* WBWelcomeView.xib */,
 				D35B032C1DFA984400C3B23A /* WBFeatureView.swift */,
+				D3E3D8261DFE79790048C795 /* WBFeatureView.xib */,
 			);
 			path = "新特性";
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 			files = (
 				D3E87DF31DEC113C009A6BF2 /* 1-4back.png in Resources */,
 				D3E882741DEC1BCF009A6BF2 /* Images.xcassets in Resources */,
+				D3E3D8271DFE79790048C795 /* WBFeatureView.xib in Resources */,
 				D3E87E001DEC113C009A6BF2 /* 钱包2@2x.png in Resources */,
 				D3E87DFB1DEC113C009A6BF2 /* 订单@3x.png in Resources */,
 				D3E87DF81DEC113C009A6BF2 /* 我的@2x.png in Resources */,

@@ -45,10 +45,8 @@ class WBWelcomeView: UIView {
         }
 //        2.设置头像,--如果没有网络图像没有下载完成，先显示占位头像
 //        如果不设置占位头像，之前设置的图像会被清空
-        print(url)
 
         iconView.sd_setImage(with: url, placeholderImage: UIImage(named: "avender_pepole"))
-        
         
         
     }
@@ -80,7 +78,10 @@ class WBWelcomeView: UIView {
                 UIView.animate(withDuration: 1.0, animations: { 
                     self.tipLab.alpha=1;
                     }, completion: { (_) in
+                    
                         
+//                        移除界面
+                        self.removeFromSuperview()
                 })
                 
                 
