@@ -257,11 +257,12 @@
 			path = Additions;
 			sourceTree = "<group>";
 		};
-		D3E2AA731DF542B800C1AEEE /* QAuth */ = {
+		D3E2AA731DF542B800C1AEEE /* QAuth授权 */ = {
 			isa = PBXGroup;
 			children = (
 				D3E2AA771DF5436C00C1AEEE /* WBQAuthViewController.swift */,
 			);
+			name = "QAuth授权";
 			path = QAuth;
 			sourceTree = "<group>";
 		};
@@ -455,7 +456,7 @@
 		D3E8823F1DEC1208009A6BF2 /* view视图和控制器 */ = {
 			isa = PBXGroup;
 			children = (
-				D3E8825C1DEC1521009A6BF2 /* main */,
+				D3E8825C1DEC1521009A6BF2 /* main主要的 */,
 				D3E882401DEC1208009A6BF2 /* discover */,
 				D3E882421DEC1208009A6BF2 /* Home */,
 				D3E8824A1DEC1208009A6BF2 /* podfile */,
@@ -497,14 +498,15 @@
 			path = podfile;
 			sourceTree = "<group>";
 		};
-		D3E8825C1DEC1521009A6BF2 /* main */ = {
+		D3E8825C1DEC1521009A6BF2 /* main主要的 */ = {
 			isa = PBXGroup;
 			children = (
 				D35B032E1DFA98DA00C3B23A /* 主控制器 */,
 				D35B03291DFA960B00C3B23A /* 新特性 */,
-				D3E2AA731DF542B800C1AEEE /* QAuth */,
+				D3E2AA731DF542B800C1AEEE /* QAuth授权 */,
 				D3E8825E1DEC1521009A6BF2 /* vistorView */,
 			);
+			name = "main主要的";
 			path = main;
 			sourceTree = "<group>";
 		};

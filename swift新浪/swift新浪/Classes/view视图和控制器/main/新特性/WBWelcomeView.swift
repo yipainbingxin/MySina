@@ -47,13 +47,8 @@ class WBWelcomeView: UIView {
 //        如果不设置占位头像，之前设置的图像会被清空
 
         iconView.sd_setImage(with: url, placeholderImage: UIImage(named: "avender_pepole"))
-        
-        
     }
-    
-    
-    
-    
+
 //    自动布局系统更新完成约束后。会自动调用此方法
 //    通常是对子视图布局进行修改
 //    override func layoutSubviews() {

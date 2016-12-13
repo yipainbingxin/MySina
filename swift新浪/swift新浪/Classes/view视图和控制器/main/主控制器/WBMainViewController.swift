@@ -131,10 +131,10 @@ extension WBMainViewController{
     print(sandBoxVersion)
 //    3.将当前版本号保存在沙盒
    _ = try? currentVersion.write(toFile: path, atomically: true, encoding: .utf8)
-//    4.返回两个版本号是否一致   no   new
+//  FIXME:  4.返回两个版本号是否一致   no   new
     print(path)
-//    return currentVersion != sandBoxVersion
-    return currentVersion == sandBoxVersion
+    return currentVersion != sandBoxVersion
+//    return currentVersion == sandBoxVersion
 
     }
     
@@ -156,18 +156,24 @@ extension WBMainViewController:UITabBarControllerDelegate{
         if selectedIndex == 0 && idx == selectedIndex {
             print("点击首页")
 //            3.让表格滚动到首页
+//            a.获取到控制器
             let nav = childViewControllers[0] as! UINavigationController
             let vc = nav.childViewControllers[0] as! WBHomeViewController
             
-//        滑动到底部
-//            刷新表格
+            
+//            b.滚动到顶部
+            vc.tableView?.setContentOffset(CGPoint(x:0,y:-64), animated: true)
+
+            //        滑动到底部
+//             4.刷新数据  --增加延迟，是保证表格新滚动到底部再刷新
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1, execute: {
                 vc.loadData()
             })
-            vc.tableView?.setContentOffset(CGPoint(x:0,y:-64), animated: true)
 
             
-            
+//            5.清除tabitem的badgeValue
+            vc.tabBarItem.badgeValue  = nil
+            UIApplication.shared.applicationIconBadgeNumber = 0
         }
         
         print("将要切换到\(viewController)")
@@ -184,7 +190,7 @@ extension WBMainViewController{
    fileprivate func setUpTimer() {
     
 //    时间间隔建议写长一些
-    timer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
             
     }
     
