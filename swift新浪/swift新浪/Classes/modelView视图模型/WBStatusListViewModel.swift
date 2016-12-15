@@ -23,8 +23,8 @@ import Foundation
 //上拉刷新最大的尝试次数
 fileprivate let maxPullUpTryTimes = 3
 class WBStatusListViewModel {
-//   微博模型数组懒加载
-    lazy var statusList = [WBStatus]()
+//   微博视图模型数组懒加载
+    lazy var statusList = [WBStatusViewModel]()
     
 //    上拉刷新错误次数
     fileprivate var pullupErrorTimes = 0
@@ -44,27 +44,50 @@ class WBStatusListViewModel {
     
     //      since_id下拉，取出数组第一条微博的id
         
-    let sinceId = pullUp ? 0:statusList.first?.id ?? 0
+    let sinceId = pullUp ? 0:statusList.first?.status.id ?? 0
 //        上拉刷新，取出数组的最后一条微博的id
-    let maxId = !pullUp ? 0: (statusList.last?.id) ?? 0
+    let maxId = !pullUp ? 0: (statusList.last?.status.id) ?? 0
     
     
+        
+//        发起网络请求加载微博数据
         WBNetworkManager.shared.statusList(since_id:sinceId,max_id:maxId) { (list, isSuccess) in
-//            1.字典转模型
-        guard let arry = NSArray.yy_modelArray(with: WBStatus.self, json: list ?? [])  else{
-           
-//           字典转模型失败的时候走
-            completion(isSuccess,false)
+            
+//      0.如果网络请求失败，直接执行完成回调
+            if !isSuccess{
+                completion(false, false)
+                
                 return
             }
+
+//1. 遍历字典数组，字典转模型 =》视图模型，将视图模型添加到数组
+            var arry = [WBStatusViewModel]()
+            for dict in list ?? []{
+                
+                
+//                print(dict["pic_urls"])
+//                1. 创建微博视图模型
+                let status = WBStatus()
+//                2.使用字典设置模型数值
+                status.yy_modelSet(with: dict)
+//                3. 使用 '微博' 模型创建 '微博视图'模型
+                let viewModel = WBStatusViewModel(model: status)
+//                4.添加到数组
+                arry.append(viewModel)
+                
+                
+            }
+//            视图模型创建完成
+
+            print("刷新到\(arry.count)数据\(arry)")
 //            2.FIXME:---------拼接数据
 //            下拉刷新，应该将结果数组拼接在数组前面
             if pullUp {
 //            上拉刷新，应该讲结果数组拼接在数组的末尾
-                self.statusList+=arry as! [WBStatus]
+                self.statusList+=arry 
             }else{
 //            下拉刷新，应该将结果数组拼接在数组的前面
-            self.statusList=arry as! [WBStatus]+self.statusList
+            self.statusList=arry+self.statusList
             }
 //            3.判断上拉刷新的数据量
             if pullUp && arry.count==0{

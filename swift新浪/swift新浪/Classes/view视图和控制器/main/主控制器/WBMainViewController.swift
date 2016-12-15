@@ -11,18 +11,15 @@ import SVProgressHUD
 class WBMainViewController: UITabBarController {
 //定时器
     fileprivate var timer: Timer?
-    
-    
     //主控制器
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor=UIColor.white
        setUpChildControllers()
        setUpComposeButton()
-        
-        setUpTimer()
-        
-        setUpNewFeatureView();
+       setUpTimer()
+       setUpNewFeatureView();
         
         
 //        设置代理

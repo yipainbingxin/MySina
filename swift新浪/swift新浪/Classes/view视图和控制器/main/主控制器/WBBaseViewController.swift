@@ -16,7 +16,6 @@ import UIKit
 //1、extension中不能有属性
 //2 extension中不能重写父类的方法！重写父类的方法，是子类的职责，扩展是对类的扩展
 class WBBaseViewController: UIViewController{
-    
 //    用户登录标记
 //    var userLogin = false
     

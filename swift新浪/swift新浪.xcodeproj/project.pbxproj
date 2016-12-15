@@ -10,9 +10,18 @@
 		D313FAD81DF7BB58008C5E64 /* WBUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D313FAD71DF7BB58008C5E64 /* WBUserAccount.swift */; };
 		D313FAE71DF7E795008C5E64 /* NSString+ExtentionPath.m in Sources */ = {isa = PBXBuildFile; fileRef = D313FAE61DF7E795008C5E64 /* NSString+ExtentionPath.m */; };
 		D318F2F91DED6804009F0F33 /* WBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D318F2F81DED6804009F0F33 /* WBStatus.swift */; };
+		D32258C31E00DD0B00FE0385 /* WBStatusToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32258C21E00DD0B00FE0385 /* WBStatusToolBar.swift */; };
+		D32258C51E01092200FE0385 /* WBStatusPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32258C41E01092200FE0385 /* WBStatusPictureView.swift */; };
+		D32258C71E01129F00FE0385 /* WBStatusPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32258C61E01129F00FE0385 /* WBStatusPicture.swift */; };
 		D3230DB21DF9434100F76156 /* 042.png in Resources */ = {isa = PBXBuildFile; fileRef = D3230DB11DF9434100F76156 /* 042.png */; };
 		D3230DB41DF9434B00F76156 /* 043.png in Resources */ = {isa = PBXBuildFile; fileRef = D3230DB31DF9434B00F76156 /* 043.png */; };
 		D3230DB71DF9451A00F76156 /* WBTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230DB61DF9451A00F76156 /* WBTitleButton.swift */; };
+		D338D3AC1DFFB78900565D91 /* UIImage+additons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338D3AB1DFFB78900565D91 /* UIImage+additons.swift */; };
+		D338D3AF1DFFB90200565D91 /* WBStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338D3AE1DFFB90200565D91 /* WBStatusCell.swift */; };
+		D338D3B11DFFB98E00565D91 /* WBStatusNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D338D3B01DFFB98E00565D91 /* WBStatusNormalCell.xib */; };
+		D338D3B31DFFD00300565D91 /* WBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338D3B21DFFD00300565D91 /* WBUser.swift */; };
+		D338D3B51DFFD7E000565D91 /* WBStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338D3B41DFFD7E000565D91 /* WBStatusViewModel.swift */; };
+		D338D3B71DFFF28900565D91 /* UIImageView+WebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338D3B61DFFF28900565D91 /* UIImageView+WebImage.swift */; };
 		D3404DED1DED20F70023D6E9 /* WBNetworkManager+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3404DEC1DED20F70023D6E9 /* WBNetworkManager+extension.swift */; };
 		D35B032B1DFA979C00C3B23A /* WBWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B032A1DFA979C00C3B23A /* WBWelcomeView.swift */; };
 		D35B032D1DFA984400C3B23A /* WBFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B032C1DFA984400C3B23A /* WBFeatureView.swift */; };
@@ -88,9 +97,18 @@
 		D313FAE51DF7E795008C5E64 /* NSString+ExtentionPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ExtentionPath.h"; sourceTree = "<group>"; };
 		D313FAE61DF7E795008C5E64 /* NSString+ExtentionPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExtentionPath.m"; sourceTree = "<group>"; };
 		D318F2F81DED6804009F0F33 /* WBStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatus.swift; sourceTree = "<group>"; };
+		D32258C21E00DD0B00FE0385 /* WBStatusToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusToolBar.swift; sourceTree = "<group>"; };
+		D32258C41E01092200FE0385 /* WBStatusPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusPictureView.swift; sourceTree = "<group>"; };
+		D32258C61E01129F00FE0385 /* WBStatusPicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusPicture.swift; sourceTree = "<group>"; };
 		D3230DB11DF9434100F76156 /* 042.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 042.png; sourceTree = "<group>"; };
 		D3230DB31DF9434B00F76156 /* 043.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 043.png; sourceTree = "<group>"; };
 		D3230DB61DF9451A00F76156 /* WBTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTitleButton.swift; sourceTree = "<group>"; };
+		D338D3AB1DFFB78900565D91 /* UIImage+additons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+additons.swift"; sourceTree = "<group>"; };
+		D338D3AE1DFFB90200565D91 /* WBStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusCell.swift; sourceTree = "<group>"; };
+		D338D3B01DFFB98E00565D91 /* WBStatusNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBStatusNormalCell.xib; sourceTree = "<group>"; };
+		D338D3B21DFFD00300565D91 /* WBUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBUser.swift; sourceTree = "<group>"; };
+		D338D3B41DFFD7E000565D91 /* WBStatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusViewModel.swift; sourceTree = "<group>"; };
+		D338D3B61DFFF28900565D91 /* UIImageView+WebImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+WebImage.swift"; sourceTree = "<group>"; };
 		D3404DEC1DED20F70023D6E9 /* WBNetworkManager+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WBNetworkManager+extension.swift"; sourceTree = "<group>"; };
 		D35B032A1DFA979C00C3B23A /* WBWelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBWelcomeView.swift; sourceTree = "<group>"; };
 		D35B032C1DFA984400C3B23A /* WBFeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBFeatureView.swift; sourceTree = "<group>"; };
@@ -218,6 +236,17 @@
 			path = tittleButton;
 			sourceTree = "<group>";
 		};
+		D338D3AD1DFFB8E100565D91 /* statusCell */ = {
+			isa = PBXGroup;
+			children = (
+				D338D3AE1DFFB90200565D91 /* WBStatusCell.swift */,
+				D32258C21E00DD0B00FE0385 /* WBStatusToolBar.swift */,
+				D32258C41E01092200FE0385 /* WBStatusPictureView.swift */,
+				D338D3B01DFFB98E00565D91 /* WBStatusNormalCell.xib */,
+			);
+			path = statusCell;
+			sourceTree = "<group>";
+		};
 		D35B03291DFA960B00C3B23A /* 新特性 */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +275,8 @@
 		D3E2AA691DF53CE200C1AEEE /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				D338D3AB1DFFB78900565D91 /* UIImage+additons.swift */,
+				D338D3B61DFFF28900565D91 /* UIImageView+WebImage.swift */,
 				D313FAE51DF7E795008C5E64 /* NSString+ExtentionPath.h */,
 				D313FAE61DF7E795008C5E64 /* NSString+ExtentionPath.m */,
 				D3E2AA6A1DF53CE200C1AEEE /* Bundel+extension.swift */,
@@ -432,6 +463,7 @@
 			isa = PBXGroup;
 			children = (
 				D3E9CE121DF66AD200DFB9B5 /* WBStatusListViewModel.swift */,
+				D338D3B41DFFD7E000565D91 /* WBStatusViewModel.swift */,
 			);
 			path = "modelView视图模型";
 			sourceTree = "<group>";
@@ -440,6 +472,8 @@
 			isa = PBXGroup;
 			children = (
 				D318F2F81DED6804009F0F33 /* WBStatus.swift */,
+				D338D3B21DFFD00300565D91 /* WBUser.swift */,
+				D32258C61E01129F00FE0385 /* WBStatusPicture.swift */,
 			);
 			path = "model模型";
 			sourceTree = "<group>";
@@ -476,6 +510,7 @@
 		D3E882421DEC1208009A6BF2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D338D3AD1DFFB8E100565D91 /* statusCell */,
 				D3230DB51DF944F100F76156 /* tittleButton */,
 				D3E882431DEC1208009A6BF2 /* WBHomeViewController.swift */,
 			);
@@ -645,6 +680,7 @@
 				D3E882741DEC1BCF009A6BF2 /* Images.xcassets in Resources */,
 				D3E3D8271DFE79790048C795 /* WBFeatureView.xib in Resources */,
 				D3E87E001DEC113C009A6BF2 /* 钱包2@2x.png in Resources */,
+				D338D3B11DFFB98E00565D91 /* WBStatusNormalCell.xib in Resources */,
 				D3E87DFB1DEC113C009A6BF2 /* 订单@3x.png in Resources */,
 				D3E87DF81DEC113C009A6BF2 /* 我的@2x.png in Resources */,
 				D35B03351DFA98DA00C3B23A /* main.json in Resources */,
@@ -740,13 +776,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3E2AA701DF53CE200C1AEEE /* UIBarButtonItem+extension.swift in Sources */,
+				D338D3B71DFFF28900565D91 /* UIImageView+WebImage.swift in Sources */,
 				D3E2AA721DF53CE200C1AEEE /* WeiBoCommen.swift in Sources */,
 				D3E875FD1DEC108C009A6BF2 /* AppDelegate.swift in Sources */,
 				D313FAD81DF7BB58008C5E64 /* WBUserAccount.swift in Sources */,
 				D3230DB71DF9451A00F76156 /* WBTitleButton.swift in Sources */,
+				D338D3B51DFFD7E000565D91 /* WBStatusViewModel.swift in Sources */,
 				D3404DED1DED20F70023D6E9 /* WBNetworkManager+extension.swift in Sources */,
+				D32258C51E01092200FE0385 /* WBStatusPictureView.swift in Sources */,
 				D35B032B1DFA979C00C3B23A /* WBWelcomeView.swift in Sources */,
 				D35B03361DFA98DA00C3B23A /* WBBaseViewController.swift in Sources */,
+				D32258C71E01129F00FE0385 /* WBStatusPicture.swift in Sources */,
 				D3E2AA781DF5436C00C1AEEE /* WBQAuthViewController.swift in Sources */,
 				D3E2AA711DF53CE200C1AEEE /* UIScreen+WBUIScreen.m in Sources */,
 				D3E8824E1DEC1208009A6BF2 /* WBHomeViewController.swift in Sources */,
@@ -754,7 +794,11 @@
 				D318F2F91DED6804009F0F33 /* WBStatus.swift in Sources */,
 				D35B03391DFA98DA00C3B23A /* WBMainViewController.swift in Sources */,
 				D3E882781DEC1F56009A6BF2 /* WBNetworkManager.swift in Sources */,
+				D32258C31E00DD0B00FE0385 /* WBStatusToolBar.swift in Sources */,
+				D338D3B31DFFD00300565D91 /* WBUser.swift in Sources */,
+				D338D3AC1DFFB78900565D91 /* UIImage+additons.swift in Sources */,
 				D35B033A1DFA98DA00C3B23A /* WBNvcViewController.swift in Sources */,
+				D338D3AF1DFFB90200565D91 /* WBStatusCell.swift in Sources */,
 				D3E882521DEC1208009A6BF2 /* WBMessageViewController.swift in Sources */,
 				D35B032D1DFA984400C3B23A /* WBFeatureView.swift in Sources */,
 				D3E882651DEC1521009A6BF2 /* WBVistorView.swift in Sources */,
