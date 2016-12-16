@@ -44,6 +44,19 @@ class WBStatusViewModel: CustomStringConvertible{
 //    配图视图大小
     var pictureSize = CGSize()
     
+//    如果是被转发的微博，原创微博一定没有图
+    var picURLs : [WBStatusPicture]?{
+        
+//        如果有转发的微博，返回被转发微博的配图
+//        如果没有被转发的微博，返回原创微博的配图
+//        如果都没有。返回nil
+        return status.retweeted_status?.pic_urls ?? status.pic_urls
+    }
+    
+    
+//    被转发微博的文字
+    var retweetedText: String?
+    
     
     
     /// 构造模型
@@ -81,9 +94,13 @@ class WBStatusViewModel: CustomStringConvertible{
         commentStr = countString(count: model.comments_count, defaultStr: "评论")
         likedStr = countString(count: model.attitudes_count, defaultStr: "赞")
         
-//        计算配图视图的大小
-        pictureSize = cacuPictureViewSize(count: status.pic_urls?.count)
+//        计算配图视图的大小（有原创的就计算原创的，有转发的就计算转发的）
+        pictureSize = cacuPictureViewSize(count: picURLs?.count)
         
+//        设置被转发微博的文字
+        
+        retweetedText = "@"+(status.retweeted_status?.user?.screen_name ?? "")+":"+(status.retweeted_status?.text ?? "")
+
 
     }
 
@@ -92,6 +109,19 @@ class WBStatusViewModel: CustomStringConvertible{
         return status.description
     }
    
+    
+    /// 使用单个图像，更新配图视图的大小
+    ///
+    /// - parameter image: 网络缓存的单张图像
+    func updateSingleImageSize(image: UIImage) {
+        var size = image.size
+//        注意：尺寸需要增加顶部的12个点起，便于布局
+        size.height += WBStatusPictureViewQutterMargin
+        
+        pictureSize = size
+    }
+    
+    
     
     /// 计算指定数量的图片对应的配图视图的大小
     ///
@@ -128,7 +158,6 @@ class WBStatusViewModel: CustomStringConvertible{
 
             return defaultStr
         }
-        
         if count<10000 {
             return count.description
         }

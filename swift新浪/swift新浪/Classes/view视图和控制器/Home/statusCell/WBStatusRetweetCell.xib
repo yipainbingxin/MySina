@@ -10,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="350" id="5pe-nK-zVD" customClass="WBStatusCell" customModule="swift新浪" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="383" id="5pe-nK-zVD" customClass="WBStatusCell" customModule="swift新浪" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="383"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5pe-nK-zVD" id="jQJ-yc-nET">
-                <frame key="frameInset" width="375" height="349"/>
+                <frame key="frameInset" width="375" height="382"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8U3-S7-uzY" userLabel="顶部分割视图">
@@ -48,6 +48,14 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="047" translatesAutoresizingMaskIntoConstraints="NO" id="fq5-am-lxM" userLabel="认证图标"/>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPO-1t-rF0" userLabel="正文">
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWw-Uk-D11" userLabel="被转发微博的背景按钮">
+                        <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HT-cq-3FH">
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -131,25 +139,32 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="dGa-Ak-gIu" secondAttribute="bottom" id="23w-zz-In8"/>
                     <constraint firstItem="2m2-ht-5nC" firstAttribute="bottom" secondItem="gdp-x1-Mak" secondAttribute="bottom" id="7Zo-E6-i9t"/>
+                    <constraint firstItem="4HT-cq-3FH" firstAttribute="leading" secondItem="EWw-Uk-D11" secondAttribute="leadingMargin" constant="12" id="9AR-rf-65Q"/>
                     <constraint firstItem="2m2-ht-5nC" firstAttribute="leading" secondItem="gdp-x1-Mak" secondAttribute="trailing" constant="8" id="AvV-Fv-lHV"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vPO-1t-rF0" secondAttribute="trailing" constant="11" id="CWX-mF-vgX"/>
                     <constraint firstAttribute="trailing" secondItem="dGa-Ak-gIu" secondAttribute="trailing" id="Dep-a7-b5U"/>
                     <constraint firstItem="5aS-63-uvm" firstAttribute="leading" secondItem="khs-3Q-ohT" secondAttribute="trailing" constant="15" id="E6b-1G-npM"/>
                     <constraint firstItem="vPO-1t-rF0" firstAttribute="leading" secondItem="khs-3Q-ohT" secondAttribute="leading" id="EkD-t1-Id1"/>
+                    <constraint firstItem="dGa-Ak-gIu" firstAttribute="top" secondItem="EWw-Uk-D11" secondAttribute="bottom" constant="8" id="IIi-Yu-gdZ"/>
                     <constraint firstItem="RJb-lR-WXU" firstAttribute="leading" secondItem="5aS-63-uvm" secondAttribute="trailing" constant="8" id="LTO-K8-HwM"/>
                     <constraint firstItem="RJb-lR-WXU" firstAttribute="centerY" secondItem="5aS-63-uvm" secondAttribute="centerY" id="M17-vY-M6z"/>
                     <constraint firstItem="vPO-1t-rF0" firstAttribute="top" secondItem="khs-3Q-ohT" secondAttribute="bottom" constant="12" id="M6H-zf-72j"/>
                     <constraint firstItem="khs-3Q-ohT" firstAttribute="leading" secondItem="jQJ-yc-nET" secondAttribute="leadingMargin" constant="12" id="PTu-V2-lZF"/>
+                    <constraint firstItem="EWw-Uk-D11" firstAttribute="leading" secondItem="jQJ-yc-nET" secondAttribute="leading" id="QFR-5c-flw"/>
+                    <constraint firstAttribute="trailing" secondItem="EWw-Uk-D11" secondAttribute="trailing" id="QQK-Jy-tvS"/>
                     <constraint firstItem="gdp-x1-Mak" firstAttribute="bottom" secondItem="khs-3Q-ohT" secondAttribute="bottom" id="Rhu-qg-siD"/>
                     <constraint firstAttribute="trailingMargin" secondItem="4D3-fo-4gW" secondAttribute="trailing" constant="12" id="T9g-BQ-Eoi"/>
                     <constraint firstItem="dGa-Ak-gIu" firstAttribute="leading" secondItem="jQJ-yc-nET" secondAttribute="leading" id="UpZ-BO-HcL"/>
                     <constraint firstItem="8U3-S7-uzY" firstAttribute="leading" secondItem="jQJ-yc-nET" secondAttribute="leading" id="XCQ-t6-uTd"/>
                     <constraint firstAttribute="trailing" secondItem="8U3-S7-uzY" secondAttribute="trailing" id="YJQ-4U-SdD"/>
+                    <constraint firstItem="EWw-Uk-D11" firstAttribute="top" secondItem="vPO-1t-rF0" secondAttribute="bottom" constant="12" id="ZdZ-eS-2iy"/>
                     <constraint firstItem="4D3-fo-4gW" firstAttribute="leading" secondItem="vPO-1t-rF0" secondAttribute="leading" id="aJt-UR-jho"/>
-                    <constraint firstItem="4D3-fo-4gW" firstAttribute="top" secondItem="vPO-1t-rF0" secondAttribute="bottom" id="aeW-Gg-9GI"/>
                     <constraint firstItem="fq5-am-lxM" firstAttribute="centerX" secondItem="khs-3Q-ohT" secondAttribute="trailing" constant="-4" id="bPo-oB-gwF"/>
+                    <constraint firstItem="4HT-cq-3FH" firstAttribute="top" secondItem="EWw-Uk-D11" secondAttribute="top" constant="12" id="bie-5h-bfJ"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4HT-cq-3FH" secondAttribute="trailing" constant="12" id="ecf-c0-spy"/>
                     <constraint firstItem="fq5-am-lxM" firstAttribute="centerY" secondItem="khs-3Q-ohT" secondAttribute="bottom" constant="-4" id="fxb-yc-lZx"/>
                     <constraint firstItem="gdp-x1-Mak" firstAttribute="leading" secondItem="5aS-63-uvm" secondAttribute="leading" id="kQ4-0r-2kv"/>
+                    <constraint firstItem="4D3-fo-4gW" firstAttribute="top" secondItem="4HT-cq-3FH" secondAttribute="bottom" id="oCg-AL-YiV"/>
                     <constraint firstItem="khs-3Q-ohT" firstAttribute="top" secondItem="8U3-S7-uzY" secondAttribute="bottom" constant="12" id="pjo-8m-kSY"/>
                     <constraint firstItem="dGa-Ak-gIu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="4D3-fo-4gW" secondAttribute="bottom" constant="35" id="ruP-SM-D3w"/>
                     <constraint firstItem="8U3-S7-uzY" firstAttribute="top" secondItem="jQJ-yc-nET" secondAttribute="top" id="tmR-Vu-Q1r"/>
@@ -161,13 +176,14 @@
                 <outlet property="memberIconView" destination="RJb-lR-WXU" id="iM3-GR-EEY"/>
                 <outlet property="nameLable" destination="5aS-63-uvm" id="cYD-j4-LS1"/>
                 <outlet property="pictureView" destination="4D3-fo-4gW" id="PuP-Mz-MU6"/>
+                <outlet property="retweetedLable" destination="4HT-cq-3FH" id="Mrn-X4-I94"/>
                 <outlet property="sourceLable" destination="2m2-ht-5nC" id="6fW-zU-cWD"/>
                 <outlet property="statusLable" destination="vPO-1t-rF0" id="9cq-y2-msD"/>
                 <outlet property="timelable" destination="gdp-x1-Mak" id="eYl-C5-U6k"/>
                 <outlet property="toolBar" destination="dGa-Ak-gIu" id="MRm-ZM-dhT"/>
                 <outlet property="vipIconView" destination="fq5-am-lxM" id="Imm-jT-jGp"/>
             </connections>
-            <point key="canvasLocation" x="-0.5" y="121"/>
+            <point key="canvasLocation" x="-78.5" y="20.5"/>
         </tableViewCell>
     </objects>
     <resources>

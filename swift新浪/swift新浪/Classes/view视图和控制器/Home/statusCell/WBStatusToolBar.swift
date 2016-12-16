@@ -11,9 +11,7 @@ import UIKit
 class WBStatusToolBar: UIView {
     var viewModel: WBStatusViewModel?{
         didSet{
-            
-            
-            guard let str1  = viewModel?.retweetedStr,let  str2 = viewModel?.commentStr,let str3 = viewModel?.likedStr else {
+    guard let str1  = viewModel?.retweetedStr,let  str2 = viewModel?.commentStr,let str3 = viewModel?.likedStr else {
                 return
             }
     retweetedButton.setTitle("\(str1)", for: [])

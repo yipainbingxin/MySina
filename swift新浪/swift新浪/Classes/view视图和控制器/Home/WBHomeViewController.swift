@@ -9,8 +9,11 @@
 import UIKit
 
 
+//原创微博可重用cellid
+fileprivate let originalCellId = "originalCellId"
+//被转发微博的可重用cellid
+fileprivate let retweetedCellId = "retweetedCellId"
 
-fileprivate let cellId = "cellId"
 //定义全局常量，尽量使用private修饰。否则到处都可以访问
 class WBHomeViewController: WBBaseViewController {
     //    微博数据数组
@@ -76,10 +79,17 @@ extension WBHomeViewController{
         return listViewModel.statusList.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        0.取出视图模型，根据视图模型判断可重用的cell
+        let viewModel = listViewModel.statusList[indexPath.row]
+        
+        let cellId = (viewModel.status.retweeted_status != nil) ? retweetedCellId : originalCellId
+        
+
         //       1.取cell
+//        FIXME:-----修改cellId
         let cell =  tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! WBStatusCell
+        
         //        2.设置cell
-       let viewModel = listViewModel.statusList[indexPath.row]
        cell.viewModel=viewModel
         //        3.返回cell
         return cell
@@ -98,7 +108,8 @@ extension WBHomeViewController{
         //        注册原型cell
 //        tableView?.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
         
-        tableView?.register(UINib(nibName: "WBStatusNormalCell", bundle: nil), forCellReuseIdentifier: cellId)
+        tableView?.register(UINib(nibName: "WBStatusNormalCell", bundle: nil), forCellReuseIdentifier: originalCellId)
+        tableView?.register(UINib(nibName: "WBStatusRetweetCell", bundle: nil), forCellReuseIdentifier: retweetedCellId)
 //        设置行高
         tableView?.rowHeight=UITableViewAutomaticDimension
 //        预估行高

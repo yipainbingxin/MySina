@@ -18,28 +18,21 @@ class WBStatus: NSObject {
 //    上拉、下拉数据处理逻辑
 //    下拉刷新数据数量
 //    本地缓存数据处理（SLLITE）
-    
-    
-    
     /// int 类型，在64位的机器上是64位的，在32位的机器就是32位
 //    如果不写，int64在iPad2、iPhone5、5c,4s/上都无法正常运行，数据会溢出
     var id: Int64=0
-    
 //    微博信息内容
     var text:String?
-
-    
 //    转发数
     var reposts_count: Int=0
 //    评论数
     var comments_count: Int=0
 //    点赞数
     var attitudes_count: Int=0
-    
 //    微博的用户--注意和服务器返回的属性值要和key一致
     var user: WBUser?
-    
-    
+//    被转发的原微博信息字段，当该微博为转发微博时返回
+    var retweeted_status: WBStatus?
 //    所有的第三方基本都是如此
     ///  微博配图模型数组《YY_MODEL字典转换类型时，如果发现一个数组属性》
 //    尝试实用类方法，如果实现，YYmodel就尝试使用类来实例化数组中的对象

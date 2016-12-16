@@ -43,8 +43,13 @@ class WBStatusCell: UITableViewCell {
 // 
 //            }
 
-            pictureView.urls=viewModel?.status.pic_urls
+            
+//            设置配图（包含了别转发和原创）
+            pictureView.urls=viewModel?.picURLs
    
+            
+//            设置被转发微博的文字
+            retweetedLable?.text = viewModel?.retweetedText
             
             
             
@@ -75,6 +80,8 @@ class WBStatusCell: UITableViewCell {
 //    配图视图
      @IBOutlet weak var pictureView: WBStatusPictureView!
     
+//    被转发微博的标签,原创微博没有此控件，被转发的有此控件有可能有有可能没有
+    @IBOutlet weak var retweetedLable: UILabel?
     
 
 

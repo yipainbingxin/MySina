@@ -55,7 +55,7 @@ extension WBStatusPictureView{
     backgroundColor = superview?.backgroundColor
 //    超出边界的内容不显示
     clipsToBounds=true
-    let count = 3
+    let count = 4
     let rect = CGRect(x: 0, y: WBStatusPictureViewQutterMargin, width: WBStatusPictureItemWidth, height: WBStatusPictureItemWidth)
     
 //    循环创建九个imageview
