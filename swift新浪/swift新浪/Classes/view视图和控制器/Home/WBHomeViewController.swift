@@ -85,7 +85,7 @@ extension WBHomeViewController{
         let cellId = (viewModel.status.retweeted_status != nil) ? retweetedCellId : originalCellId
         
 
-        //       1.取cell
+        //       1.取cell，本身会调用代理方法（如果有）/如果没有找到cell，按照自动布局的规则从上向下计算，找到向下的约束，从而计算动态行高/
 //        FIXME:-----修改cellId
         let cell =  tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! WBStatusCell
         
@@ -94,6 +94,26 @@ extension WBHomeViewController{
         //        3.返回cell
         return cell
     }
+   
+    
+    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+       
+//        1.根据index获取视图模型
+        let vm = listViewModel.statusList[indexPath.row]
+        return vm.rowHeight
+      
+        
+        
+//        离屏渲染：
+//        在进入屏幕前绘制好表格cell，进入之后直接显示！
+//        离屏渲染的好处：更快
+//        坏处：CPU消耗大
+    }
+    
+    
+    
 }
 //MARK:-----------设置界面
 extension WBHomeViewController{
@@ -105,13 +125,13 @@ extension WBHomeViewController{
         //        swift调用OC返回的是instance的方法，无法判断是否可选
         navItem.leftBarButtonItem=UIBarButtonItem(title: "好友", fontSize: 16, frame:CGRect(x: 0, y: 0, width: 40, height: 40), target: self, action: #selector(showFriend))
         
-        //        注册原型cell
-//        tableView?.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
-        
+        //        注册原型cell和转发的cell
         tableView?.register(UINib(nibName: "WBStatusNormalCell", bundle: nil), forCellReuseIdentifier: originalCellId)
         tableView?.register(UINib(nibName: "WBStatusRetweetCell", bundle: nil), forCellReuseIdentifier: retweetedCellId)
-//        设置行高
-        tableView?.rowHeight=UITableViewAutomaticDimension
+        
+        
+//        设置自动行高
+//        tableView?.rowHeight=UITableViewAutomaticDimension
 //        预估行高
         tableView?.estimatedRowHeight=300
         
@@ -122,11 +142,10 @@ extension WBHomeViewController{
     }
     
     
-//    设置导航栏标题
+//  父类必须实现代理方法，子类才能够重写swif才是如此swi2.0不是  设置导航栏标题
     func setUpNavTitle() {
         
         let title = WBNetworkManager.shared.userAccount.screen_name
-        
         let button = WBTitleButton(title: title)
         button.addTarget(self, action: #selector(clickTitleButton), for: .touchUpInside)
         navItem.titleView=button

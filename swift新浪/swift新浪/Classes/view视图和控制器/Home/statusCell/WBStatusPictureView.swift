@@ -11,8 +11,43 @@ import UIKit
 class WBStatusPictureView: UIView {
     
     
+    var viewModel: WBStatusViewModel?{
+        didSet{
+            calcViewSize()
+          
+//            设置URLs
+            urls = viewModel?.picURLs
+        }
+    }
+    
+//    根据视图模型的配图视图大小，调整显示内容
+    fileprivate func calcViewSize() {
+        
+//        处理宽度
+//        1，单图，根据配图使徒的大小，修改subview[0]的宽高
+//        2.多图，恢复subview[0],保证九宫格的布局完整
+        if viewModel?.picURLs?.count==1 {
+            let viewSize = viewModel?.pictureSize ?? CGSize()
+//            a. 先拿到获取第0个图像视图
+            let v = subviews[0]
+            v.frame = CGRect(x: 0, y: WBStatusPictureViewQutterMargin, width: viewSize.width, height: viewSize.height)
+            
+        }else{
+            
+//            多图（无图），恢复subview[0]的宽高，保证九宫格布局的完整
+//            获取第0个视图
+            let v = subviews[0]
+            v.frame = CGRect(x: 0, y: WBStatusPictureViewQutterMargin, width: WBStatusPictureItemWidth, height: WBStatusPictureItemWidth-WBStatusPictureViewQutterMargin)
+            
+        }
+        //            修改高度约束
+        heightCons.constant = (viewModel?.pictureSize.height) ?? 0
+        
+  
+    }
+    
     /// 配图视图数组
-    var urls: [WBStatusPicture]?{
+   fileprivate   var urls: [WBStatusPicture]?{
         didSet{
 //           1.银行所有的imageview
             for v in subviews {

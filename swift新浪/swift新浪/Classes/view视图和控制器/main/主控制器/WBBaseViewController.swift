@@ -26,7 +26,7 @@ class WBBaseViewController: UIViewController{
     var tableView: UITableView?
     
 //    刷新控件 上拉刷新
-    var refreshControl :UIRefreshControl?
+    var refreshControl :CZRefreshControl?
 //   上拉刷新标记
     var isPullUp = false
     
@@ -138,7 +138,7 @@ extension WBBaseViewController{
         
 //        设置刷新控件
 //        1.》刷新控件
-        refreshControl=UIRefreshControl()
+        refreshControl=CZRefreshControl()
 //        2.》添加到视图
         tableView?.addSubview(refreshControl!)
 //        3.添加监听方法
@@ -204,6 +204,10 @@ extension WBBaseViewController: UITableViewDataSource,UITableViewDelegate{
         
 //        只是保证没有语法错误
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 10
     }
 
 //    将要显示cell

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -10,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="350" id="5pe-nK-zVD" customClass="WBStatusCell" customModule="swift新浪" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="393" id="5pe-nK-zVD" customClass="WBStatusCell" customModule="swift新浪" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="393"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5pe-nK-zVD" id="jQJ-yc-nET">
-                <frame key="frameInset" width="375" height="349"/>
+                <frame key="frameInset" width="375" height="392"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8U3-S7-uzY" userLabel="顶部分割视图">
@@ -51,6 +51,15 @@
                         <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4D3-fo-4gW" userLabel="配图视图" customClass="WBStatusPictureView" customModule="swift新浪" customModuleProvider="target">
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="LrU-Od-exb"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="heightCons" destination="LrU-Od-exb" id="2gK-4p-S7N"/>
+                        </connections>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGa-Ak-gIu" userLabel="底部工具栏" customClass="WBStatusToolBar" customModule="swift新浪" customModuleProvider="target">
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ss-UZ-joM" userLabel="转发">
@@ -87,7 +96,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fec-i4-Rpe">
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="Imq-VU-wTQ"/>
                                     <constraint firstAttribute="width" constant="1" id="ZIs-Aa-544"/>
                                 </constraints>
                             </imageView>
@@ -102,11 +110,12 @@
                             <constraint firstItem="YvP-GX-W7t" firstAttribute="height" secondItem="cVc-Rv-MNE" secondAttribute="height" id="VX6-ns-LFF"/>
                             <constraint firstAttribute="trailing" secondItem="YvP-GX-W7t" secondAttribute="trailing" id="VuX-Fd-GtW"/>
                             <constraint firstItem="2Ss-UZ-joM" firstAttribute="leading" secondItem="dGa-Ak-gIu" secondAttribute="leading" id="Zhn-je-jK8"/>
+                            <constraint firstAttribute="height" constant="35" id="ZvG-1O-Ctn"/>
                             <constraint firstItem="cVc-Rv-MNE" firstAttribute="height" secondItem="2Ss-UZ-joM" secondAttribute="height" id="aKI-zh-axO"/>
                             <constraint firstItem="Fec-i4-Rpe" firstAttribute="leading" secondItem="cVc-Rv-MNE" secondAttribute="trailing" id="afb-oi-GtF"/>
                             <constraint firstItem="1yQ-uv-YD5" firstAttribute="leading" secondItem="2Ss-UZ-joM" secondAttribute="trailing" id="h2f-5h-DIS"/>
                             <constraint firstItem="cVc-Rv-MNE" firstAttribute="width" secondItem="2Ss-UZ-joM" secondAttribute="width" id="lRk-CY-Yk2"/>
-                            <constraint firstAttribute="bottom" secondItem="Fec-i4-Rpe" secondAttribute="bottom" id="lqu-7W-cdE"/>
+                            <constraint firstAttribute="bottom" secondItem="Fec-i4-Rpe" secondAttribute="bottom" constant="8" id="lqu-7W-cdE"/>
                             <constraint firstAttribute="bottom" secondItem="2Ss-UZ-joM" secondAttribute="bottom" id="s7T-N1-jaX"/>
                             <constraint firstItem="1yQ-uv-YD5" firstAttribute="centerY" secondItem="2Ss-UZ-joM" secondAttribute="centerY" id="t4Z-xk-fra"/>
                             <constraint firstItem="YvP-GX-W7t" firstAttribute="leading" secondItem="cVc-Rv-MNE" secondAttribute="trailing" id="v6B-bY-hgS"/>
@@ -118,18 +127,8 @@
                             <outlet property="retweetedButton" destination="2Ss-UZ-joM" id="3Ae-5u-3zb"/>
                         </connections>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4D3-fo-4gW" userLabel="配图视图" customClass="WBStatusPictureView" customModule="swift新浪" customModuleProvider="target">
-                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="200" id="LrU-Od-exb"/>
-                        </constraints>
-                        <connections>
-                            <outlet property="heightCons" destination="LrU-Od-exb" id="2gK-4p-S7N"/>
-                        </connections>
-                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="dGa-Ak-gIu" secondAttribute="bottom" id="23w-zz-In8"/>
                     <constraint firstItem="2m2-ht-5nC" firstAttribute="bottom" secondItem="gdp-x1-Mak" secondAttribute="bottom" id="7Zo-E6-i9t"/>
                     <constraint firstItem="2m2-ht-5nC" firstAttribute="leading" secondItem="gdp-x1-Mak" secondAttribute="trailing" constant="8" id="AvV-Fv-lHV"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vPO-1t-rF0" secondAttribute="trailing" constant="11" id="CWX-mF-vgX"/>
@@ -151,7 +150,7 @@
                     <constraint firstItem="fq5-am-lxM" firstAttribute="centerY" secondItem="khs-3Q-ohT" secondAttribute="bottom" constant="-4" id="fxb-yc-lZx"/>
                     <constraint firstItem="gdp-x1-Mak" firstAttribute="leading" secondItem="5aS-63-uvm" secondAttribute="leading" id="kQ4-0r-2kv"/>
                     <constraint firstItem="khs-3Q-ohT" firstAttribute="top" secondItem="8U3-S7-uzY" secondAttribute="bottom" constant="12" id="pjo-8m-kSY"/>
-                    <constraint firstItem="dGa-Ak-gIu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="4D3-fo-4gW" secondAttribute="bottom" constant="35" id="ruP-SM-D3w"/>
+                    <constraint firstItem="dGa-Ak-gIu" firstAttribute="top" secondItem="4D3-fo-4gW" secondAttribute="bottom" constant="12" id="ruP-SM-D3w"/>
                     <constraint firstItem="8U3-S7-uzY" firstAttribute="top" secondItem="jQJ-yc-nET" secondAttribute="top" id="tmR-Vu-Q1r"/>
                     <constraint firstItem="5aS-63-uvm" firstAttribute="top" secondItem="khs-3Q-ohT" secondAttribute="top" constant="4" id="tq4-se-pCv"/>
                 </constraints>
@@ -167,7 +166,7 @@
                 <outlet property="toolBar" destination="dGa-Ak-gIu" id="MRm-ZM-dhT"/>
                 <outlet property="vipIconView" destination="fq5-am-lxM" id="Imm-jT-jGp"/>
             </connections>
-            <point key="canvasLocation" x="-0.5" y="121"/>
+            <point key="canvasLocation" x="-0.5" y="142.5"/>
         </tableViewCell>
     </objects>
     <resources>

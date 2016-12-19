@@ -15,6 +15,7 @@ import UIKit
 //1.遵守CustomStringConvertible
 //2.实现description的计算型属性
 
+
 //源于表格的优化：
 ///-尽量少计算，所有需要的素材提前计算好！
 ///-控件上不要设置圆角的半径，所有的图像渲染的属性，都要注意
@@ -56,6 +57,8 @@ class WBStatusViewModel: CustomStringConvertible{
     
 //    被转发微博的文字
     var retweetedText: String?
+    
+    var rowHeight : CGFloat = 0
     
     
     
@@ -101,6 +104,10 @@ class WBStatusViewModel: CustomStringConvertible{
         
         retweetedText = "@"+(status.retweeted_status?.user?.screen_name ?? "")+":"+(status.retweeted_status?.text ?? "")
 
+        
+//        计算行高
+        updateRowHeight()
+        
 
     }
 
@@ -108,17 +115,96 @@ class WBStatusViewModel: CustomStringConvertible{
     var description: String{
         return status.description
     }
+    
+    
+    
+    
+    /// 根据当前的视图模型计算行高
+    func updateRowHeight() {
+        
+//        原创微博：顶部分割视图（12）+间距（12）+图像的高度（34）+间距（12）+正文高度（需要计算）+配图视图的高度（需要计算）+间距（12）+底部视图高度（35）
+        
+        
+//        被转发的微博：顶部分割视图（12）+间距（12）+图像的高度（34）+间距（12）+正文高度（需要计算）+间距（12）+间距（12）+转发文本的高度（需要计算）+（配图视图的高度）+间距（12）+底部视图高度（35）
+        let margin :CGFloat = 12
+        let iconHeight : CGFloat = 34
+        let toolBarHeight : CGFloat = 35
+        
+        var height :CGFloat = 0
+//        1.计算顶部的位置
+        height = 2*margin+iconHeight+margin+margin
+        let viewSize = CGSize(width: UIScreen.caculateScreenWidth()-2*margin, height: CGFloat(MAXFLOAT))
+        let originalFont = UIFont.systemFont(ofSize: 15)
+        let retweetedFont = UIFont.systemFont(ofSize: 14)
+
+        
+//        2.正文高度
+        if let text = status.text {
+         
+//            1.预期的尺寸，宽度固定，高度尽量大
+//            2.选项，换行文本，统一使用usesLineFragmentOrigin
+//            3.attributes指定字体字典
+//            宽度固定、高度自动填满
+          height +=  (text as NSString).boundingRect(with: viewSize, options: [.usesLineFragmentOrigin], attributes: [NSFontAttributeName:originalFont], context: nil).height
+        }
+//        3.判断是否转发微博
+        if status.retweeted_status != nil {
+            height += 2*margin
+            
+//            h转发文本的额高度,一定用retweetedText，拼接了@用户名：微博文字
+            if let text = retweetedText {
+           height += (text as NSString).boundingRect(with: viewSize, options: [.usesLineFragmentOrigin], attributes: [NSFontAttributeName:retweetedFont], context: nil).height
+
+            }
+        }
+        
+        
+//        4.配图视图
+        height += pictureSize.height
+        height += margin
+//        5.底部工具栏
+        height += toolBarHeight
+        
+        
+//        6.使用属性记录
+        rowHeight = height
+        
+    }
    
     
     /// 使用单个图像，更新配图视图的大小
-    ///
+    ///新浪针对单张图片，都是缩略图但是偶尔会有一张很大的图片
+//    新浪微博，为了鼓励原创，支持长微博，但是有的时候有特别长的微博，长到宽度只有一个点
     /// - parameter image: 网络缓存的单张图像
     func updateSingleImageSize(image: UIImage) {
         var size = image.size
+//        过宽图像的处理
+        let maxWidth :CGFloat = 300
+        let minWidth :CGFloat = 40
+        
+        if size.width > maxWidth {
+            size.width = maxWidth
+//             等比例调整高度
+            size.height = size.width*image.size.width/image.size.width
+        }
+        
+//        过窄的图像的处理
+        if size.width < 300 {
+            size.width = minWidth
+//            要特殊处理高度，否则高度太大，会影响用户体验
+            size.height = size.width*image.size.width/image.size.width/4
+        }
+        
+        
+        
 //        注意：尺寸需要增加顶部的12个点起，便于布局
         size.height += WBStatusPictureViewQutterMargin
         
+//        重新设置配图视图的大小
         pictureSize = size
+        
+//    更新行高
+        updateRowHeight()
     }
     
     

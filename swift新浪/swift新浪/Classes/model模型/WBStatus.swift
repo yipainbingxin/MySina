@@ -52,7 +52,5 @@ class WBStatus: NSObject {
     class func modelContainerPropertyGenericClass()->([String:AnyClass]) {
         return ["pic_urls":WBStatusPicture.self]
     }
-    
-    
-    
+
 }

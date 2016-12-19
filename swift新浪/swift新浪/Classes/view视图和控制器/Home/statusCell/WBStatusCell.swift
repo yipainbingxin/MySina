@@ -27,8 +27,15 @@ class WBStatusCell: UITableViewCell {
 //            底部工具栏
             toolBar.viewModel=viewModel
         
+            
 //            测试修改视图的高度
-            pictureView.heightCons.constant = (viewModel?.pictureSize.height) ?? 0
+//            pictureView.heightCons.constant = (viewModel?.pictureSize.height) ?? 0
+//             配图视图模型
+            pictureView.viewModel = viewModel
+            
+            
+            
+            
             
 //            设置配图视图的URL的数据
 //            测试四张图像
@@ -43,17 +50,12 @@ class WBStatusCell: UITableViewCell {
 // 
 //            }
 
-            
 //            设置配图（包含了别转发和原创）
-            pictureView.urls=viewModel?.picURLs
+//            pictureView.urls=viewModel?.picURLs
    
             
 //            设置被转发微博的文字
             retweetedLable?.text = viewModel?.retweetedText
-            
-            
-            
-            
             
         }
     }
@@ -87,7 +89,16 @@ class WBStatusCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        
+        //        离屏渲染：异步绘制
+        self.layer.drawsAsynchronously = true
+//        删格化： - 异步绘制之后，会生成一张独立的图像，cell在屏幕上华松的时候，本质上滚动的是这张图片
+//        cell优化，要尽量减少用户的额数量，相当于只有一层
+//        停止滚动之后，可以接收监听
+        self.layer.shouldRasterize = true
+//        栅格化必须指定分辨率
+        self.layer.rasterizationScale = UIScreen.main.scale
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
