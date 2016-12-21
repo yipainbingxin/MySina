@@ -25,7 +25,6 @@ import UIKit
 class WBStatusViewModel: CustomStringConvertible{
 //微博模型
     var status: WBStatus
-
 //    会员图标---存储型属性（用内存换CPU）
     var memberIcon : UIImage?
     
@@ -165,7 +164,6 @@ class WBStatusViewModel: CustomStringConvertible{
 //        5.底部工具栏
         height += toolBarHeight
         
-        
 //        6.使用属性记录
         rowHeight = height
         
@@ -189,13 +187,13 @@ class WBStatusViewModel: CustomStringConvertible{
         }
         
 //        过窄的图像的处理
-        if size.width < 300 {
+        if size.width < minWidth {
             size.width = minWidth
 //            要特殊处理高度，否则高度太大，会影响用户体验
             size.height = size.width*image.size.width/image.size.width/4
         }
         
-        
+//        特例：有些图像，本身就是很窄，很长-》定义一个minheight，思路同上，在工作中，如果看到代码中有些
         
 //        注意：尺寸需要增加顶部的12个点起，便于布局
         size.height += WBStatusPictureViewQutterMargin

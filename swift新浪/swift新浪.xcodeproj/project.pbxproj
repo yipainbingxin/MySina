@@ -18,6 +18,8 @@
 		D3230DB71DF9451A00F76156 /* WBTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230DB61DF9451A00F76156 /* WBTitleButton.swift */; };
 		D32C6FCE1E07D95100DA0789 /* CZRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32C6FCD1E07D95100DA0789 /* CZRefreshControl.swift */; };
 		D32D6E281E02353700EB8E04 /* WBStatusRetweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32D6E271E02353700EB8E04 /* WBStatusRetweetCell.xib */; };
+		D33166B51E0A204A00D3FD1E /* CZRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33166B31E0A204A00D3FD1E /* CZRefreshView.swift */; };
+		D33166B61E0A204A00D3FD1E /* CZRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D33166B41E0A204A00D3FD1E /* CZRefreshView.xib */; };
 		D338D3AC1DFFB78900565D91 /* UIImage+additons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338D3AB1DFFB78900565D91 /* UIImage+additons.swift */; };
 		D338D3AF1DFFB90200565D91 /* WBStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338D3AE1DFFB90200565D91 /* WBStatusCell.swift */; };
 		D338D3B11DFFB98E00565D91 /* WBStatusNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D338D3B01DFFB98E00565D91 /* WBStatusNormalCell.xib */; };
@@ -107,6 +109,8 @@
 		D3230DB61DF9451A00F76156 /* WBTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTitleButton.swift; sourceTree = "<group>"; };
 		D32C6FCD1E07D95100DA0789 /* CZRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZRefreshControl.swift; sourceTree = "<group>"; };
 		D32D6E271E02353700EB8E04 /* WBStatusRetweetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBStatusRetweetCell.xib; sourceTree = "<group>"; };
+		D33166B31E0A204A00D3FD1E /* CZRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZRefreshView.swift; sourceTree = "<group>"; };
+		D33166B41E0A204A00D3FD1E /* CZRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CZRefreshView.xib; sourceTree = "<group>"; };
 		D338D3AB1DFFB78900565D91 /* UIImage+additons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+additons.swift"; sourceTree = "<group>"; };
 		D338D3AE1DFFB90200565D91 /* WBStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusCell.swift; sourceTree = "<group>"; };
 		D338D3B01DFFB98E00565D91 /* WBStatusNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBStatusNormalCell.xib; sourceTree = "<group>"; };
@@ -243,6 +247,8 @@
 		D32C6FCC1E07D90B00DA0789 /* CZRefreshControl */ = {
 			isa = PBXGroup;
 			children = (
+				D33166B31E0A204A00D3FD1E /* CZRefreshView.swift */,
+				D33166B41E0A204A00D3FD1E /* CZRefreshView.xib */,
 				D32C6FCD1E07D95100DA0789 /* CZRefreshControl.swift */,
 			);
 			path = CZRefreshControl;
@@ -718,6 +724,7 @@
 				D3E876021DEC108C009A6BF2 /* Main.storyboard in Resources */,
 				D3E87E011DEC113C009A6BF2 /* 钱包2@3x.png in Resources */,
 				D3E87DF61DEC113C009A6BF2 /* wo-d@2x.png in Resources */,
+				D33166B61E0A204A00D3FD1E /* CZRefreshView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,6 +805,7 @@
 				D3230DB71DF9451A00F76156 /* WBTitleButton.swift in Sources */,
 				D338D3B51DFFD7E000565D91 /* WBStatusViewModel.swift in Sources */,
 				D3404DED1DED20F70023D6E9 /* WBNetworkManager+extension.swift in Sources */,
+				D33166B51E0A204A00D3FD1E /* CZRefreshView.swift in Sources */,
 				D32258C51E01092200FE0385 /* WBStatusPictureView.swift in Sources */,
 				D35B032B1DFA979C00C3B23A /* WBWelcomeView.swift in Sources */,
 				D35B03361DFA98DA00C3B23A /* WBBaseViewController.swift in Sources */,

@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="383"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5pe-nK-zVD" id="jQJ-yc-nET">
-                <frame key="frameInset" width="375" height="382"/>
+                <frame key="frameInset" width="375" height="382.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8U3-S7-uzY" userLabel="顶部分割视图">
@@ -108,7 +108,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.24313725489999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2Ss-UZ-joM" firstAttribute="top" secondItem="dGa-Ak-gIu" secondAttribute="top" id="6Ha-Ub-jJS"/>
                             <constraint firstItem="cVc-Rv-MNE" firstAttribute="centerY" secondItem="2Ss-UZ-joM" secondAttribute="centerY" id="CeM-gA-zB5"/>
@@ -152,6 +152,7 @@
                     <constraint firstItem="EWw-Uk-D11" firstAttribute="leading" secondItem="jQJ-yc-nET" secondAttribute="leading" id="QFR-5c-flw"/>
                     <constraint firstAttribute="trailing" secondItem="EWw-Uk-D11" secondAttribute="trailing" id="QQK-Jy-tvS"/>
                     <constraint firstItem="gdp-x1-Mak" firstAttribute="bottom" secondItem="khs-3Q-ohT" secondAttribute="bottom" id="Rhu-qg-siD"/>
+                    <constraint firstItem="2Ss-UZ-joM" firstAttribute="top" secondItem="EWw-Uk-D11" secondAttribute="bottom" constant="8" id="SCo-bW-eTf"/>
                     <constraint firstAttribute="trailingMargin" secondItem="4D3-fo-4gW" secondAttribute="trailing" constant="12" id="T9g-BQ-Eoi"/>
                     <constraint firstItem="dGa-Ak-gIu" firstAttribute="leading" secondItem="jQJ-yc-nET" secondAttribute="leading" id="UpZ-BO-HcL"/>
                     <constraint firstItem="8U3-S7-uzY" firstAttribute="leading" secondItem="jQJ-yc-nET" secondAttribute="leading" id="XCQ-t6-uTd"/>
@@ -182,7 +183,7 @@
                 <outlet property="toolBar" destination="dGa-Ak-gIu" id="MRm-ZM-dhT"/>
                 <outlet property="vipIconView" destination="fq5-am-lxM" id="Imm-jT-jGp"/>
             </connections>
-            <point key="canvasLocation" x="-78.5" y="20.5"/>
+            <point key="canvasLocation" x="-73.5" y="75.5"/>
         </tableViewCell>
     </objects>
     <resources>

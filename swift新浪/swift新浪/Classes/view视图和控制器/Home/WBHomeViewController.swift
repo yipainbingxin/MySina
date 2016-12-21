@@ -25,19 +25,25 @@ class WBHomeViewController: WBBaseViewController {
     
     //    加载数据
     override func loadData() {
-        listViewModel.loadData(pullUp: self.isPullUp) { (isSuceess,shuldRefresh) in
-//            刷新数据完成
-//            结束刷新控件
-            self.refreshControl?.endRefreshing()
-            //  把上拉刷新的标记恢复
-            self.isPullUp=false
-            print("加载数据结束")
-            //            刷新表格
-            if shuldRefresh{
-            self.tableView?.reloadData()
-            }
-        }
         
+//        xcode 8.0 的刷新控件，beginRefreshing什么都不显示
+        refreshControl?.beginRefreshing()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2) { 
+            self.listViewModel.loadData(pullUp: self.isPullUp) { (isSuceess,shuldRefresh) in
+                //            刷新数据完成
+                //            结束刷新控件
+                self.refreshControl?.endRefreshing()
+                //  把上拉刷新的标记恢复
+                self.isPullUp=false
+                print("加载数据结束")
+                //            刷新表格
+                if shuldRefresh{
+                    self.tableView?.reloadData()
+                }
+            }
+            
+   
+        }
         
         
         
