@@ -276,3 +276,54 @@ extension AppDelegate{
 //3.定义变量height
 //4.从上向下，依次计算(不建议跳跃，不要省略)
 
+
+//MARK: -------刷新控件
+//重点：
+//1.多项目联动：松耦合、单一职责
+//2.KVO的使用
+
+//结构：所有接口定义的和苹果原生基本一致
+
+//CZRefreshControl：
+//负责逻辑处理 ，
+//1)对外的接口：beginRefreshing() 判断状态不是刷新  设置间距 增加间距 、endRefreshing() 判断状态是刷新；tableviewaddsubview(CZRefreshView)
+
+//2.监听：willMove(toSuperview: newSuperview)记录父视图，必须是scrollview的子类；kvo监听父视图的contentoffset；removeFromSuperview---》superview?.removeObserver(self, forKeyPath: "contentOffset")
+//super.removeFromSuperview()
+
+//3.kvo放大中判断临界点：是否移动，如果是  是否超过临界点&是否是normal状态 设置状态为pulling ；如果没有超过临界点&状态是pulling   设置状态为normal
+//如果不是： 判断状态是否是pulling -》 保证用户拉倒足够的举例放手，才会刷新，苹果默认是拉倒一定距离自动刷新
+//4.定义刷新状态枚举类型
+
+
+
+//refreshview负责UI的更新：
+//负责更新UI
+//增加刷新状态的属性 ：重写setter方法，根据刷新状态设置UI
+
+
+//MARK:  --------pop框架
+//pop框架介绍：
+//1.pop框架是Facebook推出的一套功能强大的pop动画框架
+//2.pop是c++开发的
+//3.相比较苹果原生的框架，动画的流畅度和仿真度更高
+
+//官方网站：https://github.com/facebook/pop
+//pop的基本概念
+//pop的基本使用核心基本一致
+//创建动画对象、
+//设置动画属性（图层、视图）
+//将动画添加到图层
+
+//可以设置block监听动画完成，到达某一个数值
+//pop支持三种动画类型：弹力（popSpringAnimation）、衰减(popDecayAnimation)、基本(popBasicAnimation)可以非常方便的实现动画组
+//如果需要做动画延时时，需要以下代码格式
+//anim.beginTime=CACurrentMediaTime()+CFTimeInterval(bitPattern: 1)
+
+
+
+
+
+
+
+

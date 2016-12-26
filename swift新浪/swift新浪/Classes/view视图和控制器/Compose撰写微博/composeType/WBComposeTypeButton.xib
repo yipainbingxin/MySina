@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WBComposeTypeButton" customModule="swift新浪" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_1" translatesAutoresizingMaskIntoConstraints="NO" id="Pxi-b0-AbR"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAC-c2-QhF">
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Pxi-b0-AbR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DMK-9S-Xzm"/>
+                <constraint firstItem="Pxi-b0-AbR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="HWy-tR-KR3"/>
+                <constraint firstItem="pAC-c2-QhF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="VTe-bT-i43"/>
+                <constraint firstAttribute="bottom" secondItem="pAC-c2-QhF" secondAttribute="bottom" constant="20" id="eyB-vY-Xv7"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="Pxi-b0-AbR" id="PG8-4u-lsz"/>
+                <outlet property="titleLable" destination="pAC-c2-QhF" id="s31-vm-xy2"/>
+            </connections>
+            <point key="canvasLocation" x="182" y="98"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_1" width="30" height="30"/>
+    </resources>
+</document>

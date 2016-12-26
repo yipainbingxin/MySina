@@ -71,11 +71,28 @@ class WBMainViewController: UITabBarController {
     
  @objc fileprivate func composeStatus() {
         print("撰写微博")
-    let vc = UIViewController()
-    vc.view.backgroundColor=UIColor.lightGray
-    let nav = UINavigationController(rootViewController: vc)
+//   FIXME:------  0.判断是否登录
+//    1.实例化视图
+    let v = WBComposeTypeView.composeTypeView()
     
-    self .present(nav, animated: true, completion: nil)
+//    2.显示视图
+    v.show {[weak v] (clsName) in
+        print(clsName)
+        
+//        展现撰写微博控制器
+    guard let clsName = clsName,let cls = NSClassFromString(Bundle.main.nameSpace+"."+clsName) as? UIViewController.Type else{
+            v?.removeFromSuperview()
+
+            return
+        }
+        let vc = cls.init()
+        let nav = UINavigationController(rootViewController: vc)
+        self.present(nav, animated: true){
+            
+            v?.removeFromSuperview()
+        }
+    }
+    
     
 
     }

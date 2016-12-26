@@ -9,7 +9,7 @@
 import UIKit
 
 //刷新状态切换到临界点
-fileprivate let CZRefreshOffset: CGFloat = 60
+fileprivate let CZRefreshOffset: CGFloat = 200
 
 
 /// 刷新状态
@@ -31,7 +31,6 @@ class CZRefreshControl: UIControl {
     //    MARK:-----属性
 //    刷新控件的父视图，下拉刷新的控件应该适用于UItabview、UICollectionView
     fileprivate weak var scrollView: UIScrollView?
-    
 //    刷新视图
     fileprivate lazy var refreshView: CZRefreshView = CZRefreshView.refreshView()
 //    MARK:------构造函数
@@ -96,6 +95,12 @@ class CZRefreshControl: UIControl {
 //        可以根据高度设置刷新控件的frame
         self.frame = CGRect(x: 0, y: -height, width: sv.bounds.width, height: height)
         
+        print(height)
+//        传递父视图的高度
+//        refreshView
+        refreshView.parentViewHeight = height
+        
+        
 //        判断临界点 - 只需要判断一次
         if sv.isDragging {
             if height > CZRefreshOffset&&refreshView.refreshState == .Normal {
@@ -141,6 +146,8 @@ class CZRefreshControl: UIControl {
         inset.top += CZRefreshOffset
         sv.contentInset = inset
         
+        
+        refreshView.parentViewHeight = CZRefreshOffset
 //       如果开始调用sendActions，会重复发送刷新事件
 //        sendActions(for: .valueChanged)
 
@@ -175,7 +182,7 @@ class CZRefreshControl: UIControl {
 }
 extension CZRefreshControl{
    fileprivate func setUpUI() {
-    backgroundColor = superview?.backgroundColor
+    backgroundColor = UIColor.white
 //    设置超出边界不显示
 //    clipsToBounds = true
 //   添加刷新视图

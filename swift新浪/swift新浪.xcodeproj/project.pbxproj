@@ -16,10 +16,8 @@
 		D3230DB21DF9434100F76156 /* 042.png in Resources */ = {isa = PBXBuildFile; fileRef = D3230DB11DF9434100F76156 /* 042.png */; };
 		D3230DB41DF9434B00F76156 /* 043.png in Resources */ = {isa = PBXBuildFile; fileRef = D3230DB31DF9434B00F76156 /* 043.png */; };
 		D3230DB71DF9451A00F76156 /* WBTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230DB61DF9451A00F76156 /* WBTitleButton.swift */; };
-		D32C6FCE1E07D95100DA0789 /* CZRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32C6FCD1E07D95100DA0789 /* CZRefreshControl.swift */; };
 		D32D6E281E02353700EB8E04 /* WBStatusRetweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32D6E271E02353700EB8E04 /* WBStatusRetweetCell.xib */; };
-		D33166B51E0A204A00D3FD1E /* CZRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33166B31E0A204A00D3FD1E /* CZRefreshView.swift */; };
-		D33166B61E0A204A00D3FD1E /* CZRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D33166B41E0A204A00D3FD1E /* CZRefreshView.xib */; };
+		D32F61CD1E0D12190067BB35 /* WBComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F61CC1E0D12190067BB35 /* WBComposeViewController.swift */; };
 		D338D3AC1DFFB78900565D91 /* UIImage+additons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338D3AB1DFFB78900565D91 /* UIImage+additons.swift */; };
 		D338D3AF1DFFB90200565D91 /* WBStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338D3AE1DFFB90200565D91 /* WBStatusCell.swift */; };
 		D338D3B11DFFB98E00565D91 /* WBStatusNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D338D3B01DFFB98E00565D91 /* WBStatusNormalCell.xib */; };
@@ -36,6 +34,16 @@
 		D35B03391DFA98DA00C3B23A /* WBMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B03331DFA98DA00C3B23A /* WBMainViewController.swift */; };
 		D35B033A1DFA98DA00C3B23A /* WBNvcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B03341DFA98DA00C3B23A /* WBNvcViewController.swift */; };
 		D35B033C1DFAA4B600C3B23A /* WBWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35B033B1DFAA4B600C3B23A /* WBWelcomeView.xib */; };
+		D35FA28F1E0B723C002DABE9 /* CZHumanRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35FA2891E0B723C002DABE9 /* CZHumanRefreshView.xib */; };
+		D35FA2901E0B723C002DABE9 /* CZMeiTuanRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35FA28A1E0B723C002DABE9 /* CZMeiTuanRefreshView.swift */; };
+		D35FA2911E0B723C002DABE9 /* CZMeiTuanRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35FA28B1E0B723C002DABE9 /* CZMeiTuanRefreshView.xib */; };
+		D35FA2921E0B723C002DABE9 /* CZRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35FA28C1E0B723C002DABE9 /* CZRefreshControl.swift */; };
+		D35FA2931E0B723C002DABE9 /* CZRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35FA28D1E0B723C002DABE9 /* CZRefreshView.swift */; };
+		D35FA2941E0B723C002DABE9 /* CZRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35FA28E1E0B723C002DABE9 /* CZRefreshView.xib */; };
+		D35FA29B1E0B783D002DABE9 /* WBComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35FA29A1E0B783D002DABE9 /* WBComposeView.swift */; };
+		D35FA29D1E0B7DEC002DABE9 /* WBComposeTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35FA29C1E0B7DEC002DABE9 /* WBComposeTypeView.xib */; };
+		D35FA29F1E0BA37D002DABE9 /* WBComposeTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35FA29E1E0BA37D002DABE9 /* WBComposeTypeButton.swift */; };
+		D35FA2A11E0BA391002DABE9 /* WBComposeTypeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35FA2A01E0BA391002DABE9 /* WBComposeTypeButton.xib */; };
 		D3E2AA6F1DF53CE200C1AEEE /* Bundel+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E2AA6A1DF53CE200C1AEEE /* Bundel+extension.swift */; };
 		D3E2AA701DF53CE200C1AEEE /* UIBarButtonItem+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E2AA6B1DF53CE200C1AEEE /* UIBarButtonItem+extension.swift */; };
 		D3E2AA711DF53CE200C1AEEE /* UIScreen+WBUIScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E2AA6D1DF53CE200C1AEEE /* UIScreen+WBUIScreen.m */; };
@@ -107,10 +115,8 @@
 		D3230DB11DF9434100F76156 /* 042.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 042.png; sourceTree = "<group>"; };
 		D3230DB31DF9434B00F76156 /* 043.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 043.png; sourceTree = "<group>"; };
 		D3230DB61DF9451A00F76156 /* WBTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTitleButton.swift; sourceTree = "<group>"; };
-		D32C6FCD1E07D95100DA0789 /* CZRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZRefreshControl.swift; sourceTree = "<group>"; };
 		D32D6E271E02353700EB8E04 /* WBStatusRetweetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBStatusRetweetCell.xib; sourceTree = "<group>"; };
-		D33166B31E0A204A00D3FD1E /* CZRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZRefreshView.swift; sourceTree = "<group>"; };
-		D33166B41E0A204A00D3FD1E /* CZRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CZRefreshView.xib; sourceTree = "<group>"; };
+		D32F61CC1E0D12190067BB35 /* WBComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeViewController.swift; sourceTree = "<group>"; };
 		D338D3AB1DFFB78900565D91 /* UIImage+additons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+additons.swift"; sourceTree = "<group>"; };
 		D338D3AE1DFFB90200565D91 /* WBStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusCell.swift; sourceTree = "<group>"; };
 		D338D3B01DFFB98E00565D91 /* WBStatusNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBStatusNormalCell.xib; sourceTree = "<group>"; };
@@ -127,6 +133,16 @@
 		D35B03331DFA98DA00C3B23A /* WBMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMainViewController.swift; sourceTree = "<group>"; };
 		D35B03341DFA98DA00C3B23A /* WBNvcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNvcViewController.swift; sourceTree = "<group>"; };
 		D35B033B1DFAA4B600C3B23A /* WBWelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBWelcomeView.xib; sourceTree = "<group>"; };
+		D35FA2891E0B723C002DABE9 /* CZHumanRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CZHumanRefreshView.xib; sourceTree = "<group>"; };
+		D35FA28A1E0B723C002DABE9 /* CZMeiTuanRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZMeiTuanRefreshView.swift; sourceTree = "<group>"; };
+		D35FA28B1E0B723C002DABE9 /* CZMeiTuanRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CZMeiTuanRefreshView.xib; sourceTree = "<group>"; };
+		D35FA28C1E0B723C002DABE9 /* CZRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZRefreshControl.swift; sourceTree = "<group>"; };
+		D35FA28D1E0B723C002DABE9 /* CZRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZRefreshView.swift; sourceTree = "<group>"; };
+		D35FA28E1E0B723C002DABE9 /* CZRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CZRefreshView.xib; sourceTree = "<group>"; };
+		D35FA29A1E0B783D002DABE9 /* WBComposeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeView.swift; sourceTree = "<group>"; };
+		D35FA29C1E0B7DEC002DABE9 /* WBComposeTypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBComposeTypeView.xib; sourceTree = "<group>"; };
+		D35FA29E1E0BA37D002DABE9 /* WBComposeTypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeTypeButton.swift; sourceTree = "<group>"; };
+		D35FA2A01E0BA391002DABE9 /* WBComposeTypeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBComposeTypeButton.xib; sourceTree = "<group>"; };
 		D3E2AA6A1DF53CE200C1AEEE /* Bundel+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundel+extension.swift"; sourceTree = "<group>"; };
 		D3E2AA6B1DF53CE200C1AEEE /* UIBarButtonItem+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+extension.swift"; sourceTree = "<group>"; };
 		D3E2AA6C1DF53CE200C1AEEE /* UIScreen+WBUIScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+WBUIScreen.h"; sourceTree = "<group>"; };
@@ -244,16 +260,6 @@
 			path = tittleButton;
 			sourceTree = "<group>";
 		};
-		D32C6FCC1E07D90B00DA0789 /* CZRefreshControl */ = {
-			isa = PBXGroup;
-			children = (
-				D33166B31E0A204A00D3FD1E /* CZRefreshView.swift */,
-				D33166B41E0A204A00D3FD1E /* CZRefreshView.xib */,
-				D32C6FCD1E07D95100DA0789 /* CZRefreshControl.swift */,
-			);
-			path = CZRefreshControl;
-			sourceTree = "<group>";
-		};
 		D338D3AD1DFFB8E100565D91 /* statusCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +295,39 @@
 				D35B03341DFA98DA00C3B23A /* WBNvcViewController.swift */,
 			);
 			path = "主控制器";
+			sourceTree = "<group>";
+		};
+		D35FA2881E0B723C002DABE9 /* CZRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				D35FA2891E0B723C002DABE9 /* CZHumanRefreshView.xib */,
+				D35FA28A1E0B723C002DABE9 /* CZMeiTuanRefreshView.swift */,
+				D35FA28B1E0B723C002DABE9 /* CZMeiTuanRefreshView.xib */,
+				D35FA28C1E0B723C002DABE9 /* CZRefreshControl.swift */,
+				D35FA28D1E0B723C002DABE9 /* CZRefreshView.swift */,
+				D35FA28E1E0B723C002DABE9 /* CZRefreshView.xib */,
+			);
+			path = CZRefreshControl;
+			sourceTree = "<group>";
+		};
+		D35FA2951E0B77DF002DABE9 /* Compose撰写微博 */ = {
+			isa = PBXGroup;
+			children = (
+				D35FA2961E0B77DF002DABE9 /* composeType */,
+				D32F61CC1E0D12190067BB35 /* WBComposeViewController.swift */,
+			);
+			path = "Compose撰写微博";
+			sourceTree = "<group>";
+		};
+		D35FA2961E0B77DF002DABE9 /* composeType */ = {
+			isa = PBXGroup;
+			children = (
+				D35FA29A1E0B783D002DABE9 /* WBComposeView.swift */,
+				D35FA29C1E0B7DEC002DABE9 /* WBComposeTypeView.xib */,
+				D35FA29E1E0BA37D002DABE9 /* WBComposeTypeButton.swift */,
+				D35FA2A01E0BA391002DABE9 /* WBComposeTypeButton.xib */,
+			);
+			path = composeType;
 			sourceTree = "<group>";
 		};
 		D3E2AA691DF53CE200C1AEEE /* Additions */ = {
@@ -500,7 +539,7 @@
 		D3E8823D1DEC1208009A6BF2 /* Tools工具 */ = {
 			isa = PBXGroup;
 			children = (
-				D32C6FCC1E07D90B00DA0789 /* CZRefreshControl */,
+				D35FA2881E0B723C002DABE9 /* CZRefreshControl */,
 				D3E2AA691DF53CE200C1AEEE /* Additions */,
 				D3E882761DEC1EC5009A6BF2 /* 网络请求 */,
 			);
@@ -510,6 +549,7 @@
 		D3E8823F1DEC1208009A6BF2 /* view视图和控制器 */ = {
 			isa = PBXGroup;
 			children = (
+				D35FA2951E0B77DF002DABE9 /* Compose撰写微博 */,
 				D3E8825C1DEC1521009A6BF2 /* main主要的 */,
 				D3E882401DEC1208009A6BF2 /* discover */,
 				D3E882421DEC1208009A6BF2 /* Home */,
@@ -700,14 +740,19 @@
 				D3E882741DEC1BCF009A6BF2 /* Images.xcassets in Resources */,
 				D3E3D8271DFE79790048C795 /* WBFeatureView.xib in Resources */,
 				D3E87E001DEC113C009A6BF2 /* 钱包2@2x.png in Resources */,
+				D35FA2941E0B723C002DABE9 /* CZRefreshView.xib in Resources */,
 				D338D3B11DFFB98E00565D91 /* WBStatusNormalCell.xib in Resources */,
 				D3E87DFB1DEC113C009A6BF2 /* 订单@3x.png in Resources */,
+				D35FA28F1E0B723C002DABE9 /* CZHumanRefreshView.xib in Resources */,
 				D3E87DF81DEC113C009A6BF2 /* 我的@2x.png in Resources */,
 				D35B03351DFA98DA00C3B23A /* main.json in Resources */,
 				D35B033C1DFAA4B600C3B23A /* WBWelcomeView.xib in Resources */,
 				D3E87DF21DEC113C009A6BF2 /* 1-4.png in Resources */,
+				D35FA29D1E0B7DEC002DABE9 /* WBComposeTypeView.xib in Resources */,
 				D3E8821F1DEC113F009A6BF2 /* 首页@3x.png in Resources */,
+				D35FA2A11E0BA391002DABE9 /* WBComposeTypeButton.xib in Resources */,
 				D3E87DFD1DEC113C009A6BF2 /* 订单2@3x.png in Resources */,
+				D35FA2911E0B723C002DABE9 /* CZMeiTuanRefreshView.xib in Resources */,
 				D3230DB41DF9434B00F76156 /* 043.png in Resources */,
 				D32D6E281E02353700EB8E04 /* WBStatusRetweetCell.xib in Resources */,
 				D3E87DFC1DEC113C009A6BF2 /* 订单2@2x.png in Resources */,
@@ -724,7 +769,6 @@
 				D3E876021DEC108C009A6BF2 /* Main.storyboard in Resources */,
 				D3E87E011DEC113C009A6BF2 /* 钱包2@3x.png in Resources */,
 				D3E87DF61DEC113C009A6BF2 /* wo-d@2x.png in Resources */,
-				D33166B61E0A204A00D3FD1E /* CZRefreshView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,20 +845,21 @@
 				D338D3B71DFFF28900565D91 /* UIImageView+WebImage.swift in Sources */,
 				D3E2AA721DF53CE200C1AEEE /* WeiBoCommen.swift in Sources */,
 				D3E875FD1DEC108C009A6BF2 /* AppDelegate.swift in Sources */,
+				D35FA2921E0B723C002DABE9 /* CZRefreshControl.swift in Sources */,
 				D313FAD81DF7BB58008C5E64 /* WBUserAccount.swift in Sources */,
 				D3230DB71DF9451A00F76156 /* WBTitleButton.swift in Sources */,
 				D338D3B51DFFD7E000565D91 /* WBStatusViewModel.swift in Sources */,
 				D3404DED1DED20F70023D6E9 /* WBNetworkManager+extension.swift in Sources */,
-				D33166B51E0A204A00D3FD1E /* CZRefreshView.swift in Sources */,
 				D32258C51E01092200FE0385 /* WBStatusPictureView.swift in Sources */,
+				D35FA2901E0B723C002DABE9 /* CZMeiTuanRefreshView.swift in Sources */,
 				D35B032B1DFA979C00C3B23A /* WBWelcomeView.swift in Sources */,
+				D35FA29B1E0B783D002DABE9 /* WBComposeView.swift in Sources */,
 				D35B03361DFA98DA00C3B23A /* WBBaseViewController.swift in Sources */,
 				D32258C71E01129F00FE0385 /* WBStatusPicture.swift in Sources */,
 				D3E2AA781DF5436C00C1AEEE /* WBQAuthViewController.swift in Sources */,
 				D3E2AA711DF53CE200C1AEEE /* UIScreen+WBUIScreen.m in Sources */,
 				D3E8824E1DEC1208009A6BF2 /* WBHomeViewController.swift in Sources */,
 				D3E2AA6F1DF53CE200C1AEEE /* Bundel+extension.swift in Sources */,
-				D32C6FCE1E07D95100DA0789 /* CZRefreshControl.swift in Sources */,
 				D318F2F91DED6804009F0F33 /* WBStatus.swift in Sources */,
 				D35B03391DFA98DA00C3B23A /* WBMainViewController.swift in Sources */,
 				D3E882781DEC1F56009A6BF2 /* WBNetworkManager.swift in Sources */,
@@ -822,12 +867,15 @@
 				D338D3B31DFFD00300565D91 /* WBUser.swift in Sources */,
 				D338D3AC1DFFB78900565D91 /* UIImage+additons.swift in Sources */,
 				D35B033A1DFA98DA00C3B23A /* WBNvcViewController.swift in Sources */,
+				D32F61CD1E0D12190067BB35 /* WBComposeViewController.swift in Sources */,
 				D338D3AF1DFFB90200565D91 /* WBStatusCell.swift in Sources */,
 				D3E882521DEC1208009A6BF2 /* WBMessageViewController.swift in Sources */,
 				D35B032D1DFA984400C3B23A /* WBFeatureView.swift in Sources */,
 				D3E882651DEC1521009A6BF2 /* WBVistorView.swift in Sources */,
+				D35FA2931E0B723C002DABE9 /* CZRefreshView.swift in Sources */,
 				D35B03371DFA98DA00C3B23A /* WBComposeButton.swift in Sources */,
 				D3E882531DEC1208009A6BF2 /* WBPodfileViewController.swift in Sources */,
+				D35FA29F1E0BA37D002DABE9 /* WBComposeTypeButton.swift in Sources */,
 				D313FAE71DF7E795008C5E64 /* NSString+ExtentionPath.m in Sources */,
 				D3E9CE131DF66AD200DFB9B5 /* WBStatusListViewModel.swift in Sources */,
 				D35B03381DFA98DA00C3B23A /* WBDemoViewController.swift in Sources */,
